@@ -1,0 +1,12 @@
+<Project>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+    <Import Project="..\src\CI\build\Rocket.Surgery.MSBuild.CI.props" />
+    <Import Project="..\src\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.props" />
+    <Import Project="..\src\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.props" />
+    <Import Project="..\src\Metadata\build\Rocket.Surgery.MSBuild.Metadata.props" />
+    <Import Project="..\src\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.props" />
+    <PropertyGroup>
+        <MergeCoverage>true</MergeCoverage>
+        <IncludeTestAssembly>true</IncludeTestAssembly>
+    </PropertyGroup>
+</Project>

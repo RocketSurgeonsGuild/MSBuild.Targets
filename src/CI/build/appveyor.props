@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup Condition="'$(APPVEYOR)'!=''">
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddAppVeyorAttributes;
+        </CoreCompileDependsOn>
+
+        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+</Project>

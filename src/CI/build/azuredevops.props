@@ -1,0 +1,10 @@
+<Project>
+    <PropertyGroup Condition="'$(TF_BUILD)'!=''">
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddAzureDevOpsAttributes;
+        </CoreCompileDependsOn>
+
+        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿<Project>
+  <ItemGroup Condition="'$(Language)'!='F#'">
+    <Compile Remove="$(__BuildJetBrainsAnnotations)" />
+    <Compile Include="$(__BuildJetBrainsAnnotations)" Visible="false" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Language)'=='F#'">
+    <CompileBefore Remove="$(__BuildJetBrainsAnnotations)" />
+    <CompileBefore Include="$(__BuildJetBrainsAnnotations)" Visible="false" />
+  </ItemGroup>
+</Project>

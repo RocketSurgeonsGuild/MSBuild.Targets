@@ -1,0 +1,8 @@
+<Project>
+    <Import Project=".\CI\build\Rocket.Surgery.MSBuild.CI.targets" />
+    <Import Project=".\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.targets" />
+    <Import Project=".\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.targets" />
+    <Import Project=".\Metadata\build\Rocket.Surgery.MSBuild.Metadata.targets" />
+    <Import Project=".\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.targets" />
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+</Project>

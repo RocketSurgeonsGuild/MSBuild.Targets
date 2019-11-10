@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <__BuildJetBrainsAnnotations>$(MSBuildThisFileDirectory)\..\jetbrains\JetBrains.Annotations.cs</__BuildJetBrainsAnnotations>
+  </PropertyGroup>
+</Project>

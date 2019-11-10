@@ -1,0 +1,19 @@
+﻿<Project>
+    <Target Name="AddAppVeyorAttributes" BeforeTargets="CoreCompile" Condition="'$(APPVEYOR)'!=''">
+        <ItemGroup>
+            <AssemblyMetadata Include="AppVeyor_ProjectId" Value="$(APPVEYOR_PROJECT_ID)" />
+            <AssemblyMetadata Include="AppVeyor_ProjectName" Value="$(APPVEYOR_PROJECT_NAME)" />
+            <AssemblyMetadata Include="AppVeyor_BuildId" Value="$(APPVEYOR_BUILD_ID)" />
+            <AssemblyMetadata Include="AppVeyor_BuildNumber" Value="$(APPVEYOR_BUILD_NUMBER)" />
+            <AssemblyMetadata Include="AppVeyor_BuildVersion" Value="$(APPVEYOR_BUILD_VERSION)" />
+            <AssemblyMetadata Include="AppVeyor_JobId" Value="$(APPVEYOR_JOB_ID)" />
+            <AssemblyMetadata Include="AppVeyor_JobName" Value="$(APPVEYOR_JOB_NAME)" />
+            <AssemblyMetadata Include="AppVeyor_JobNumber" Value="$(APPVEYOR_JOB_NUMBER)" />
+            <AssemblyMetadata Include="AppVeyor_RepositoryName" Value="$(APPVEYOR_REPO_NAME)" />
+            <AssemblyMetadata Include="AppVeyor_RepositoryBranch" Value="$(APPVEYOR_REPO_BRANCH)" />
+            <AssemblyMetadata Include="AppVeyor_RepositoryCommit" Value="$(APPVEYOR_REPO_COMMIT)" />
+            <AssemblyMetadata Include="Commit_Ref_Name" Value="$(APPVEYOR_REPO_BRANCH)" />
+            <AssemblyMetadata Include="Commit_Sha" Value="$(APPVEYOR_REPO_COMMIT)" />
+        </ItemGroup>
+    </Target>
+</Project>

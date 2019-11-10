@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup Condition="'$(GITLAB_CI)'!=''">
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddGitlabAttributes;
+        </CoreCompileDependsOn>
+
+        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+</Project>

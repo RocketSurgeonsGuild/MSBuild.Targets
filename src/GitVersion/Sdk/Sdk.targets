@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\Rocket.Surgery.MSBuild.Metadata.targets" />
+  <Import Project="..\build\Rocket.Surgery.MSBuild.GitVersion.targets" />
 </Project>

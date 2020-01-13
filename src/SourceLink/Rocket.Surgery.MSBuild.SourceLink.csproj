@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Include="build/*.*" Pack="true" PackagePath="build" />
     <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+    <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="**\*.cs" />

@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitversion.targets" Condition="'$(GitVersion_SemVer)'!=''" />
 </Project>

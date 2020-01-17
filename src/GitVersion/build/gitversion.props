@@ -1,5 +1,6 @@
 ﻿<Project>
     <PropertyGroup>
+        <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
         <CoreCompileDependsOn>
             $(CoreCompileDependsOn);
             AddGitVersionAttributes;

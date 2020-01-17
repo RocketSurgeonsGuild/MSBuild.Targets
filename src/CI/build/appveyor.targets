@@ -1,5 +1,5 @@
 ﻿<Project>
-    <Target Name="AddAppVeyorAttributes" BeforeTargets="CoreCompile" Condition="'$(APPVEYOR)'!=''">
+    <Target Name="AddAppVeyorAttributes" BeforeTargets="CoreCompile">
         <ItemGroup>
             <AssemblyMetadata Include="AppVeyor_ProjectId" Value="$(APPVEYOR_PROJECT_ID)" />
             <AssemblyMetadata Include="AppVeyor_ProjectName" Value="$(APPVEYOR_PROJECT_NAME)" />

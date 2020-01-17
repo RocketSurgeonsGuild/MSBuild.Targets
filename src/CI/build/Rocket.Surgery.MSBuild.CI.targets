@@ -1,5 +1,5 @@
 ﻿<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)\azuredevops.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\gitlab.targets" Condition="'$(GITLAB_CI)'!=''" />
+  <Import Project="$(MSBuildThisFileDirectory)\appveyor.targets" Condition="'$(APPVEYOR)'!=''" />
+  <Import Project="$(MSBuildThisFileDirectory)\azuredevops.targets" Condition="'$(TF_BUILD)'!=''" />
 </Project>

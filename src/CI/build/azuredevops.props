@@ -1,5 +1,5 @@
 <Project>
-    <PropertyGroup Condition="'$(TF_BUILD)'!=''">
+    <PropertyGroup>
         <CoreCompileDependsOn>
             $(CoreCompileDependsOn);
             AddAzureDevOpsAttributes;

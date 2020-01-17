@@ -1,5 +1,5 @@
 ﻿<Project>
-    <Target Name="AddGitlabAttributes" BeforeTargets="CoreCompile" Condition="'$(GITLAB_CI)'!=''">
+    <Target Name="AddGitlabAttributes" BeforeTargets="CoreCompile">
         <ItemGroup>
             <AssemblyMetadata Include="Commit_Sha" Value="$(GITLAB_COMMIT_SHA)" />
             <AssemblyMetadata Include="Commit_Before_Sha" Value="$(GITLAB_COMMIT_BEFORE_SHA)" />

@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Include="build/*.*" Pack="true" PackagePath="build" />
     <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+    <None Include="buildTransitive/*.*" Pack="true" PackagePath="buildTransitive" />
     <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
   </ItemGroup>
   <ItemGroup>

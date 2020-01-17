@@ -1,8 +1,3 @@
 ﻿<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" />
-  <PropertyGroup>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-    <!-- <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile> -->
-    <!-- <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode> -->
-  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)\gitversion.props" Condition="'$(GitVersion_SemVer)'!=''" />
 </Project>

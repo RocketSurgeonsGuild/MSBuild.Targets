@@ -1,5 +1,5 @@
 <Project>
-    <Target Name="AddAzureDevOpsAttributes" BeforeTargets="CoreCompile" Condition="'$(TF_BUILD)'!=''">
+    <Target Name="AddAzureDevOpsAttributes" BeforeTargets="CoreCompile">
         <ItemGroup>
             <AssemblyMetadata Include="AzureDevOps_AgentId" Value="$(AGENT_ID)" />
             <AssemblyMetadata Include="AzureDevOps_AgentName" Value="$(AGENT_NAME)" />

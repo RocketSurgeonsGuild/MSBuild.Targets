@@ -5,7 +5,7 @@
     <!-- <GlobalPackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="2.9.8" /> -->
     <GlobalPackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" />
     <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" />
-    <GlobalPackageReference Include="Roslynator.Analyzers" Version="2.2.0" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="2.3.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="GitVersion.Tool" Version="5.1.3" />

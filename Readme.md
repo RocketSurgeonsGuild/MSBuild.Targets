@@ -34,13 +34,13 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 <!-- history badges -->
 
 <!-- nuget packages -->
-| Package | NuGet | MyGet |
-| ------- | ----- | ----- |
-| Rocket.Surgery.MSBuild.CI | [![nuget-version-crojfy8iotja-badge]![nuget-downloads-crojfy8iotja-badge]][nuget-crojfy8iotja] | [![myget-version-crojfy8iotja-badge]![myget-downloads-crojfy8iotja-badge]][myget-crojfy8iotja] |
-| Rocket.Surgery.MSBuild.GitVersion | [![nuget-version-mqvqrnlrlsyw-badge]![nuget-downloads-mqvqrnlrlsyw-badge]][nuget-mqvqrnlrlsyw] | [![myget-version-mqvqrnlrlsyw-badge]![myget-downloads-mqvqrnlrlsyw-badge]][myget-mqvqrnlrlsyw] |
-| Rocket.Surgery.MSBuild.JetBrains.Annotations | [![nuget-version-58lqc0lqtjla-badge]![nuget-downloads-58lqc0lqtjla-badge]][nuget-58lqc0lqtjla] | [![myget-version-58lqc0lqtjla-badge]![myget-downloads-58lqc0lqtjla-badge]][myget-58lqc0lqtjla] |
-| Rocket.Surgery.MSBuild.Metadata | [![nuget-version-q/inj3fd2l6a-badge]![nuget-downloads-q/inj3fd2l6a-badge]][nuget-q/inj3fd2l6a] | [![myget-version-q/inj3fd2l6a-badge]![myget-downloads-q/inj3fd2l6a-badge]][myget-q/inj3fd2l6a] |
-| Rocket.Surgery.MSBuild.SourceLink | [![nuget-version-su+gulvppohw-badge]![nuget-downloads-su+gulvppohw-badge]][nuget-su+gulvppohw] | [![myget-version-su+gulvppohw-badge]![myget-downloads-su+gulvppohw-badge]][myget-su+gulvppohw] |
+| Package | NuGet |
+| ------- | ----- |
+| Rocket.Surgery.MSBuild.CI | [![nuget-version-crojfy8iotja-badge]![nuget-downloads-crojfy8iotja-badge]][nuget-crojfy8iotja] |
+| Rocket.Surgery.MSBuild.GitVersion | [![nuget-version-mqvqrnlrlsyw-badge]![nuget-downloads-mqvqrnlrlsyw-badge]][nuget-mqvqrnlrlsyw] |
+| Rocket.Surgery.MSBuild.JetBrains.Annotations | [![nuget-version-58lqc0lqtjla-badge]![nuget-downloads-58lqc0lqtjla-badge]][nuget-58lqc0lqtjla] |
+| Rocket.Surgery.MSBuild.Metadata | [![nuget-version-q/inj3fd2l6a-badge]![nuget-downloads-q/inj3fd2l6a-badge]][nuget-q/inj3fd2l6a] |
+| Rocket.Surgery.MSBuild.SourceLink | [![nuget-version-su+gulvppohw-badge]![nuget-downloads-su+gulvppohw-badge]][nuget-su+gulvppohw] |
 <!-- nuget packages -->
 
 # Whats next?
@@ -64,33 +64,18 @@ TBD
 [nuget-crojfy8iotja]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.CI/
 [nuget-version-crojfy8iotja-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.CI.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-crojfy8iotja-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.CI.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-crojfy8iotja]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.MSBuild.CI
-[myget-version-crojfy8iotja-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.MSBuild.CI.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-crojfy8iotja-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.MSBuild.CI.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-mqvqrnlrlsyw]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.GitVersion/
 [nuget-version-mqvqrnlrlsyw-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.GitVersion.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-mqvqrnlrlsyw-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.GitVersion.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-mqvqrnlrlsyw]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.MSBuild.GitVersion
-[myget-version-mqvqrnlrlsyw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.MSBuild.GitVersion.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-mqvqrnlrlsyw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.MSBuild.GitVersion.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-58lqc0lqtjla]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.JetBrains.Annotations/
 [nuget-version-58lqc0lqtjla-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-58lqc0lqtjla-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-58lqc0lqtjla]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.MSBuild.JetBrains.Annotations
-[myget-version-58lqc0lqtjla-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-58lqc0lqtjla-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-q/inj3fd2l6a]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.Metadata/
 [nuget-version-q/inj3fd2l6a-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-q/inj3fd2l6a-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-q/inj3fd2l6a]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.MSBuild.Metadata
-[myget-version-q/inj3fd2l6a-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.MSBuild.Metadata.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-q/inj3fd2l6a-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.MSBuild.Metadata.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-su+gulvppohw]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.SourceLink/
 [nuget-version-su+gulvppohw-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.SourceLink.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-su+gulvppohw-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.SourceLink.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-su+gulvppohw]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.MSBuild.SourceLink
-[myget-version-su+gulvppohw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.MSBuild.SourceLink.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-su+gulvppohw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.MSBuild.SourceLink.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 <!-- generated references -->
 
 <!-- nuke-data
@@ -104,6 +89,4 @@ azurepipelines:
 appveyor:
   account: RocketSurgeonsGuild
   build: MSBuild.Targets
-myget:
-  account: rocket-surgeons-guild
 -->

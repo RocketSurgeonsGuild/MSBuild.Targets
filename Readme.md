@@ -53,9 +53,9 @@ TBD
 [github-license-badge]: https://img.shields.io/github/license/RocketSurgeonsGuild/MSBuild.Targets.svg?style=flat "License"
 [codecov]: https://codecov.io/gh/RocketSurgeonsGuild/MSBuild.Targets
 [codecov-badge]: https://img.shields.io/codecov/c/github/RocketSurgeonsGuild/MSBuild.Targets.svg?color=E03997&label=codecov&logo=codecov&logoColor=E03997&style=flat "Code Coverage"
-[azurepipelines]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build/latest?definitionId=5&branchName=master
+[azurepipelines]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build/latest?definitionId=5&branchName=master
 [azurepipelines-badge]: https://img.shields.io/azure-devops/build/rocketsurgeonsguild/Libraries/5.svg?color=98C6FF&label=azure%20pipelines&logo=azuredevops&logoColor=98C6FF&style=flat "Azure Pipelines Status"
-[azurepipelines-history]: https://rocketsurgeonsguild.visualstudio.com/Libraries/_build?definitionId=5&branchName=master
+[azurepipelines-history]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build?definitionId=5&branchName=master
 [azurepipelines-history-badge]: https://buildstats.info/azurepipelines/chart/rocketsurgeonsguild/Libraries/5?includeBuildsFromPullRequest=false "Azure Pipelines History"
 [github]: https://github.com/RocketSurgeonsGuild/MSBuild.Targets/actions?query=workflow%3Aci
 [github-badge]: https://img.shields.io/github/workflow/status/RocketSurgeonsGuild/MSBuild.Targets/ci.svg?label=github&logo=github&color=b845fc&logoColor=b845fc&style=flat "GitHub Actions Status"

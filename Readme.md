@@ -1,25 +1,32 @@
 # Rocket Surgeons Build Metadata
 
-Every good Rocket Surgeon needs a way to know where there code came from.  This package embededs metadata into your assemblies for a few purposes:
-
+Every good Rocket Surgeon needs a way to know where there code came from. This package embededs metadata into your assemblies for a few purposes:
 
 # What does it do?
-1) Build Validation
-  * Know where your assembly came from.  Was it built on appveyor, gitlab, or azure pipelines
-    * Current supports:
-    * AppVeyor
-    * GitLab
-    * Azure Pipelines
-2) Storing `GitVersion` information, useful for validating versions of assemblies in your application.
-3) Build Source Linking
-  * Enables some sane defaults for SourceLink packages
-4) JetBrains.Annotations
-  * Brings in `JetBrains.Annotations` automagically as a source file.
-5) Adds support for a new `ItemGroup` Item `<InternalsVisibleTo Include="MyAssembly" />`
-5) Adds support for a new `ItemGroup` Item `<AssemblyMetadata Include="Key" Value="Value" />`
-6) The information package allows for exatracting
+
+1. Build Validation
+
+-   Know where your assembly came from. Was it built on appveyor, gitlab, or azure pipelines
+    -   Current supports:
+    -   AppVeyor
+    -   GitLab
+    -   Azure Pipelines
+
+2. Storing `GitVersion` information, useful for validating versions of assemblies in your application.
+3. Build Source Linking
+
+-   Enables some sane defaults for SourceLink packages
+
+4. JetBrains.Annotations
+
+-   Brings in `JetBrains.Annotations` automagically as a source file.
+
+5. Adds support for a new `ItemGroup` Item `<InternalsVisibleTo Include="MyAssembly" />`
+6. Adds support for a new `ItemGroup` Item `<AssemblyMetadata Include="Key" Value="Value" />`
+7. The information package allows for exatracting
 
 # Status
+
 <!-- badges -->
 [![github-release-badge]][github-release]
 [![github-license-badge]][github-license]
@@ -27,10 +34,10 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 <!-- badges -->
 
 <!-- history badges -->
-| Azure Pipelines | GitHub Actions |
-| --------------- | -------------- |
-| [![azurepipelines-badge]][azurepipelines] | [![github-badge]][github] |
-| [![azurepipelines-history-badge]][azurepipelines-history] | [![github-history-badge]][github] |
+| GitHub Actions |
+| -------------- |
+| [![github-badge]][github] |
+| [![github-history-badge]][github] |
 <!-- history badges -->
 
 <!-- nuget packages -->
@@ -44,6 +51,7 @@ Every good Rocket Surgeon needs a way to know where there code came from.  This 
 <!-- nuget packages -->
 
 # Whats next?
+
 TBD
 
 <!-- generated references -->
@@ -53,10 +61,6 @@ TBD
 [github-license-badge]: https://img.shields.io/github/license/RocketSurgeonsGuild/MSBuild.Targets.svg?style=flat "License"
 [codecov]: https://codecov.io/gh/RocketSurgeonsGuild/MSBuild.Targets
 [codecov-badge]: https://img.shields.io/codecov/c/github/RocketSurgeonsGuild/MSBuild.Targets.svg?color=E03997&label=codecov&logo=codecov&logoColor=E03997&style=flat "Code Coverage"
-[azurepipelines]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build/latest?definitionId=5&branchName=master
-[azurepipelines-badge]: https://img.shields.io/azure-devops/build/rocketsurgeonsguild/Libraries/5.svg?color=98C6FF&label=azure%20pipelines&logo=azuredevops&logoColor=98C6FF&style=flat "Azure Pipelines Status"
-[azurepipelines-history]: https://dev.azure.com/rocketsurgeonsguild/Libraries/_build?definitionId=5&branchName=master
-[azurepipelines-history-badge]: https://buildstats.info/azurepipelines/chart/rocketsurgeonsguild/Libraries/5?includeBuildsFromPullRequest=false "Azure Pipelines History"
 [github]: https://github.com/RocketSurgeonsGuild/MSBuild.Targets/actions?query=workflow%3Aci
 [github-badge]: https://img.shields.io/github/workflow/status/RocketSurgeonsGuild/MSBuild.Targets/ci.svg?label=github&logo=github&color=b845fc&logoColor=b845fc&style=flat "GitHub Actions Status"
 [github-history-badge]: https://buildstats.info/github/chart/RocketSurgeonsGuild/MSBuild.Targets?includeBuildsFromPullRequest=false "GitHub Actions History"
@@ -81,8 +85,4 @@ TBD
 github:
   owner: RocketSurgeonsGuild
   repository: MSBuild.Targets
-azurepipelines:
-  account: rocketsurgeonsguild
-  teamproject: Libraries
-  builddefinition: 5
 -->

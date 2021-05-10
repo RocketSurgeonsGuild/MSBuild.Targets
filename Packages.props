@@ -11,13 +11,13 @@
     <PackageReference Update="JetBrains.ReSharper.GlobalTools" Version="2021.1.2" />
     <PackageReference Update="Nuke.Common" Version="5.1.1" />
     <PackageReference Update="ReportGenerator" Version="4.8.8" />
-    <PackageReference Update="Rocket.Surgery.Nuke" Version="0.14.3" />
+    <PackageReference Update="Rocket.Surgery.Nuke" Version="0.15.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Bogus" Version="33.0.2" />
     <PackageReference Update="coverlet.collector" Version="3.0.3" />
     <PackageReference Update="coverlet.msbuild" Version="3.0.3" />
-    <PackageReference Update="FakeItEasy" Version="7.0.1" />
+    <PackageReference Update="FakeItEasy" Version="7.0.2" />
     <PackageReference Update="FakeItEasy.Analyzer.CSharp" Version="6.1.0" />
     <PackageReference Update="FluentAssertions" Version="5.10.3" />
     <PackageReference Update="FluentAssertions.Analyzers" Version="0.11.4" />

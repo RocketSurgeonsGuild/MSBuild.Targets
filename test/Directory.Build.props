@@ -6,6 +6,7 @@
     <Import Project="..\src\Metadata\build\Rocket.Surgery.MSBuild.Metadata.props" />
     <Import Project="..\src\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.props" />
     <PropertyGroup>
+        <IsPackable>false</IsPackable>
         <MergeCoverage>true</MergeCoverage>
         <IncludeTestAssembly>true</IncludeTestAssembly>
     </PropertyGroup>

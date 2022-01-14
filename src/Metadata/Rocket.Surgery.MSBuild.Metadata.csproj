@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;net5.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;net6.0</TargetFrameworks>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageDescription>
       Adds support for InternalsVisibleTo as an ItemGroup allowing you to annotate assemblies that should be able to see internals of given assembly.

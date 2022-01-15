@@ -3,7 +3,7 @@
   <ItemGroup>
     <!-- <PackageVersion Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="2.9.8" /> -->
     <PackageVersion Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" />
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.0.0" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.1.1" />
     <PackageVersion Include="Roslynator.Analyzers" Version="3.3.0" />
   </ItemGroup>
   <ItemGroup>

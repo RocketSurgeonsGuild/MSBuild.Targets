@@ -1,4 +1,0 @@
-﻿<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\GenerateAssemblyMetadata.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)\GenerateInternalsVisibleTo.targets" />
-</Project>

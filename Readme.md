@@ -46,7 +46,6 @@ Every good Rocket Surgeon needs a way to know where there code came from. This p
 | Rocket.Surgery.MSBuild.CI | [![nuget-version-crojfy8iotja-badge]![nuget-downloads-crojfy8iotja-badge]][nuget-crojfy8iotja] |
 | Rocket.Surgery.MSBuild.GitVersion | [![nuget-version-mqvqrnlrlsyw-badge]![nuget-downloads-mqvqrnlrlsyw-badge]][nuget-mqvqrnlrlsyw] |
 | Rocket.Surgery.MSBuild.JetBrains.Annotations | [![nuget-version-58lqc0lqtjla-badge]![nuget-downloads-58lqc0lqtjla-badge]][nuget-58lqc0lqtjla] |
-| Rocket.Surgery.MSBuild.Metadata | [![nuget-version-q/inj3fd2l6a-badge]![nuget-downloads-q/inj3fd2l6a-badge]][nuget-q/inj3fd2l6a] |
 | Rocket.Surgery.MSBuild.SourceLink | [![nuget-version-su+gulvppohw-badge]![nuget-downloads-su+gulvppohw-badge]][nuget-su+gulvppohw] |
 <!-- nuget packages -->
 
@@ -73,9 +72,6 @@ TBD
 [nuget-58lqc0lqtjla]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.JetBrains.Annotations/
 [nuget-version-58lqc0lqtjla-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-58lqc0lqtjla-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.JetBrains.Annotations.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[nuget-q/inj3fd2l6a]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.Metadata/
-[nuget-version-q/inj3fd2l6a-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
-[nuget-downloads-q/inj3fd2l6a-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.Metadata.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
 [nuget-su+gulvppohw]: https://www.nuget.org/packages/Rocket.Surgery.MSBuild.SourceLink/
 [nuget-version-su+gulvppohw-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.MSBuild.SourceLink.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-su+gulvppohw-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.MSBuild.SourceLink.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"

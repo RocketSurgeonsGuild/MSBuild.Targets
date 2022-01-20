@@ -3,7 +3,6 @@
     <Import Project=".\CI\build\Rocket.Surgery.MSBuild.CI.props" />
     <Import Project=".\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.props" />
     <Import Project=".\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.props" />
-    <Import Project=".\Metadata\build\Rocket.Surgery.MSBuild.Metadata.props" />
     <Import Project=".\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.props" />
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>

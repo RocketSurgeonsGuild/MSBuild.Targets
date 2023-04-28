@@ -9,6 +9,7 @@
         <PackageVersion Condition="'$(GitVersion_SemVer)'!=''">$(GitVersion_SemVer)</PackageVersion>
         <AssemblyVersion Condition="'$(GitVersion_Major)'!=''">$(GitVersion_Major).0.0.0</AssemblyVersion>
         <FileVersion Condition="'$(GitVersion_AssemblySemVer)'!=''">$(GitVersion_AssemblySemVer)</FileVersion>
-        <InformationalVersion Condition="'$(GitVersion_AssemblySemVer)'!=''">$(GitVersion_InformationalVersion)</InformationalVersion>
+        <InformationalVersion Condition="'$(GitVersion_InformationalVersion)'!=''">$(GitVersion_InformationalVersion)</InformationalVersion>
+        <Version Condition="'$(GitVersion_SemVer)'!=''">$(GitVersion_Semver)</Version>
     </PropertyGroup>
 </Project>

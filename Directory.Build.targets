@@ -7,7 +7,9 @@
             PrivateAssets="All"
         />
     <PackageReference Include="Microsoft.SourceLink.GitHub" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-      <!-- <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" /> -->
+    <!-- <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" /> -->
     <PackageReference Include="Roslynator.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
   </ItemGroup>
 </Project>

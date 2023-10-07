@@ -46,6 +46,7 @@ using Rocket.Surgery.Nuke.GithubActions;
 [UploadLogs]
 [TitleEvents]
 [ContinuousIntegrationConventions]
+[LocalBuildConventions]
 public partial class Pipeline
 {
     public static RocketSurgeonGitHubActionsConfiguration CiIgnoreMiddleware(RocketSurgeonGitHubActionsConfiguration configuration)
@@ -67,7 +68,7 @@ public partial class Pipeline
            .ExcludeRepositoryConfigurationFiles()
            .AddNugetPublish()
            .Jobs.OfType<RocketSurgeonsGithubActionsJob>()
-           .First(z => z.Name == "Build")
+           .First(z => z.Name.Equals("build", StringComparison.OrdinalIgnoreCase))
            .UseDotNetSdks("3.1", "6.0")
            .AddNuGetCache()
             // .ConfigureForGitVersion()

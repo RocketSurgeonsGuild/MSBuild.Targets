@@ -1,11 +1,6 @@
 ﻿<Project>
     <PropertyGroup>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-        <CoreCompileDependsOn>
-            $(CoreCompileDependsOn);
-            AddGitVersionAttributes;
-        </CoreCompileDependsOn>
-
         <PackageVersion Condition="'$(GitVersion_SemVer)'!=''">$(GitVersion_SemVer)</PackageVersion>
         <AssemblyVersion Condition="'$(GitVersion_Major)'!=''">$(GitVersion_Major).0.0.0</AssemblyVersion>
         <FileVersion Condition="'$(GitVersion_AssemblySemVer)'!=''">$(GitVersion_AssemblySemVer)</FileVersion>

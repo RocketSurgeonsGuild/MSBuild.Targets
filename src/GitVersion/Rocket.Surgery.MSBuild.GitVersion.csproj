@@ -10,7 +10,6 @@
     <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
     <None Include="buildTransitive/*.*" Pack="true" PackagePath="buildTransitive" />
     <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
-    <ProjectReference Include="../Metadata/Rocket.Surgery.MSBuild.Metadata.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="**\*.cs" />

@@ -24,12 +24,15 @@ public partial class Pipeline : NukeBuild,
                                 ICanPackWithDotNetCore,
                                 IHaveDataCollector,
                                 ICanClean,
+                                ICanLintStagedFiles,
+                                ICanDotNetFormat,
+                                ICanPrettier,
                                 ICanUpdateReadme,
                                 IGenerateCodeCoverageReport,
                                 IGenerateCodeCoverageSummary,
                                 IGenerateCodeCoverageBadges,
-                                IHaveConfiguration<Configuration>,
-                                ICanLint
+                                ICanRegenerateBuildConfiguration,
+                                IHaveConfiguration<Configuration>
 {
     /// <summary>
     ///     Support plugins are available for:
@@ -58,10 +61,6 @@ public partial class Pipeline : NukeBuild,
     public Target Lint => _ => _.Inherit<ICanLint>(x => x.Lint);
     public Target Restore => _ => _.Inherit<ICanRestoreWithDotNetCore>(x => x.CoreRestore);
     public Target Test => _ => _.Inherit<ICanTestWithDotNetCore>(x => x.CoreTest);
-
-    public Target BuildVersion => _ => _.Inherit<IHaveBuildVersion>(x => x.BuildVersion)
-                                        .Before(Default)
-                                        .Before(Clean);
 
     [Solution(GenerateProjects = true)] private Solution Solution { get; } = null!;
     Nuke.Common.ProjectModel.Solution IHaveSolution.Solution => Solution;

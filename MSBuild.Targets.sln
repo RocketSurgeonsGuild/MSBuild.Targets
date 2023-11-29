@@ -85,6 +85,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".vscode", ".vscode", "{2349
 		.vscode/settings.json = .vscode/settings.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.MSBuild.GlobalAnalyzerConfig", "src\GlobalAnalyzerConfig\Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj", "{13C2EA12-2841-4051-9CBD-89A9E56B2445}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,18 @@ Global
 		{5EDE7E88-5A85-4855-A09F-55F0C840BB93}.Release|x64.Build.0 = Release|Any CPU
 		{5EDE7E88-5A85-4855-A09F-55F0C840BB93}.Release|x86.ActiveCfg = Release|Any CPU
 		{5EDE7E88-5A85-4855-A09F-55F0C840BB93}.Release|x86.Build.0 = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|x64.Build.0 = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Debug|x86.Build.0 = Debug|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x64.ActiveCfg = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x64.Build.0 = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x86.ActiveCfg = Release|Any CPU
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +190,7 @@ Global
 		{54992192-69EB-4F29-8466-778DA6530296} = {6805A374-5E01-4A83-B179-224D0765AE04}
 		{78E64421-1156-466E-A77B-35DFD431C2E4} = {C3D5FCFC-8271-4A98-BF22-D56EFD1206E8}
 		{234984AF-8902-4FEC-AD1B-EC538A0FEB23} = {C3D5FCFC-8271-4A98-BF22-D56EFD1206E8}
+		{13C2EA12-2841-4051-9CBD-89A9E56B2445} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {439897C2-CCBD-44FE-B2DC-A3E4670ADA59}

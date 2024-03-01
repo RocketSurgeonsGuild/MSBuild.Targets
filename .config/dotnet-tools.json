@@ -7,7 +7,7 @@
             "commands": ["dotnet-gitversion"]
         },
         "dotnet-reportgenerator-globaltool": {
-            "version": "5.2.0",
+            "version": "5.2.2",
             "commands": ["reportgenerator"]
         },
         "nuke.globaltool": {
@@ -27,7 +27,7 @@
             "commands": ["nukeeper"]
         },
         "strawberryshake.tools": {
-            "version": "13.8.1",
+            "version": "13.9.0",
             "commands": ["dotnet-graphql"]
         },
         "dotnet-outdated-tool": {

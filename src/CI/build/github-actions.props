@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup>
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddGithubActionsAttributes;
+        </CoreCompileDependsOn>
+
+        <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+</Project>

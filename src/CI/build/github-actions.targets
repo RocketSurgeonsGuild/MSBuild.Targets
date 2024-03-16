@@ -1,0 +1,26 @@
+﻿<Project>
+    <ItemGroup>
+        <AssemblyMetadata Include="Commit_Sha" Value="$(GITHUB_SHA)" />
+        <AssemblyMetadata Include="Commit_Before_Sha" Value="$(GITHUB_BASE_REF)" />
+        <AssemblyMetadata Include="Commit_Ref_Name" Value="$(GITHUB_REF_NAME)" />
+        <AssemblyMetadata Include="ACTION" Value="$(GITHUB_ACTION)" />
+        <AssemblyMetadata Include="ACTION_PATH" Value="$(GITHUB_ACTION_PATH)" />
+        <AssemblyMetadata Include="ACTION_REPOSITORY" Value="$(GITHUB_ACTION_REPOSITORY)" />
+        <AssemblyMetadata Include="GITHUB_ACTOR" Value="$(GITHUB_ACTOR)" />
+        <AssemblyMetadata Include="GITHUB_EVENT_NAME" Value="$(GITHUB_EVENT_NAME)" />
+        <AssemblyMetadata Include="GITHUB_JOB" Value="$(GITHUB_JOB)" />
+        <AssemblyMetadata Include="GITHUB_REF" Value="$(GITHUB_REF)" />
+        <AssemblyMetadata Include="GITHUB_REF_NAME" Value="$(GITHUB_REF_NAME)" />
+        <AssemblyMetadata Include="REPOSITORY" Value="$(GITHUB_REPOSITORY)" />
+        <AssemblyMetadata Include="REPOSITORY_OWNER" Value="$(GITHUB_REPOSITORY_OWNER)" />
+        <AssemblyMetadata Include="WORKFLOW" Value="$(GITHUB_WORKFLOW)" />
+        <AssemblyMetadata Include="WORKFLOW_REF" Value="$(GITHUB_WORKFLOW_REF)" />
+        <AssemblyMetadata Include="WORKFLOW_SHA" Value="$(GITHUB_WORKFLOW_SHA)" />
+        <AssemblyMetadata Include="RUNNER_ARCH" Value="$(RUNNER_ARCH)" />
+        <AssemblyMetadata Include="RUNNER_DEBUG" Value="$(RUNNER_DEBUG)" />
+        <AssemblyMetadata Include="RUNNER_NAME" Value="$(RUNNER_NAME)" />
+        <AssemblyMetadata Include="RUNNER_OS" Value="$(RUNNER_OS)" />
+        <AssemblyMetadata Include="RUNNER_TEMP" Value="$(RUNNER_TEMP)" />
+        <AssemblyMetadata Include="RUNNER_TOOL_CACHE" Value="$(RUNNER_TOOL_CACHE)" />
+    </ItemGroup>
+</Project>

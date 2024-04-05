@@ -5,7 +5,6 @@
         <PackageReference Include="Rocket.Surgery.Extensions.Testing.XUnit" />
         <PackageReference Include="Bogus" />
         <PackageReference Include="coverlet.collector" />
-        <PackageReference Include="coverlet.msbuild" />
         <PackageReference Include="FakeItEasy" />
         <PackageReference Include="FakeItEasy.Analyzer.CSharp" />
         <PackageReference Include="FluentAssertions" />
@@ -18,5 +17,6 @@
     <Import Project="..\src\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.targets" />
     <Import Project="..\src\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.targets" />
     <Import Project="..\src\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.targets" />
-    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+    <Import
+        Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>

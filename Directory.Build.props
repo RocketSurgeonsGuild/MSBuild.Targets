@@ -24,8 +24,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <AnalysisLevel>latest</AnalysisLevel>
         <!--        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
-                <WarningsAsErrors>RS0017</WarningsAsErrors>
         <!--        <WarningsNotAsErrors></WarningsNotAsErrors>-->
+        <WarningsAsErrors>RS0017</WarningsAsErrors>
+
+        <NuGetAudit>true</NuGetAudit>
+        <NuGetAuditMode>all</NuGetAuditMode>
+        <NuGetAuditLevel>moderate</NuGetAuditLevel>
     </PropertyGroup>
     <ItemGroup>
         <None
@@ -35,7 +39,8 @@
             PackagePath="/images/"
             Visible="false"
         />
-        <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="/" Visible="false" />
+        <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="/"
+            Visible="false" />
     </ItemGroup>
     <ItemGroup>
         <ProjectCapability Include="DynamicDependentFile" />

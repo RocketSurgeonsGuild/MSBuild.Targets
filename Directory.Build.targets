@@ -1,24 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.79" />
+  <!-- .editorconfig analyzer work around -->
+  <!--
+  <PropertyGroup>
+    SkipDefaultEditorConfigAsAdditionalFile>true</SkipDefaultEditorConfigAsAdditionalFile>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference
-            Include="Microsoft.NETFramework.ReferenceAssemblies"
-            IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive"
-            PrivateAssets="All"
-        />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    <PackageReference
-            Include="Polyfill"
-            IncludeAssets="runtime;build;buildMultitargeting;buildTransitive;native;contentfiles;analyzers"
-            PrivateAssets="All"
-            Condition="'$(MSBuildProjectName)'!='.build'"
-        />
-    <!--
-    <PackageReference Include="Roslynator.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    <PackageReference Include="Roslynator.Formatting.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    <PackageReference Include="Roslynator.CodeFixes" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    <PackageReference Include="Roslynator.Refactorings" IncludeAssets="analyzers;build;buildMultitargeting;buildTransitive" PrivateAssets="All" />
-    -->
+    <AdditionalFiles Condition="Exists('$(MSBuildThisFileDirectory)\.editorconfig')" Include="$(MSBuildThisFileDirectory)\.editorconfig" />
   </ItemGroup>
+  -->
 </Project>

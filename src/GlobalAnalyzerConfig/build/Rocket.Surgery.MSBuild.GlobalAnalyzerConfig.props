@@ -1,8 +1,0 @@
-﻿<Project>
-  <PropertyGroup>
-    <RSGGlobalAnalyzerConfigEnabled Condition="$(RSGEditorConfigEnabled) == ''">true</RSGGlobalAnalyzerConfigEnabled>
-    <RSGGlobalAnalyzerConfigRoslynEnabled Condition="$(RSGGlobalAnalyzerConfigRoslynEnabled) == ''">true</RSGGlobalAnalyzerConfigRoslynEnabled>
-    <RSGGlobalAnalyzerConfigRiderEnabled Condition="$(RSGGlobalAnalyzerConfigRiderEnabled) == ''">true</RSGGlobalAnalyzerConfigRiderEnabled>
-    <RSGGlobalAnalyzerConfigRoslynatorEnabled Condition="$(RSGGlobalAnalyzerConfigRoslynatorEnabled) == ''">true</RSGGlobalAnalyzerConfigRoslynatorEnabled>
-  </PropertyGroup>
-</Project>

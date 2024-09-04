@@ -1,3 +1,4 @@
 ﻿<Project>
   <Import Project="$(MSBuildThisFileDirectory)\sourcelink.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)\ResolveCopyLocalNuGetPackagePdbsAndXml.targets" />
 </Project>

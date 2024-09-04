@@ -19,152 +19,84 @@ name: ci
 on:
   push:
     branches:
-      - 'master'
-      - 'main'
-      - 'next'
+      - master
+      - next
     tags:
-      - 'v*'
-    paths-ignore:
-      - '.codecov.yml'
-      - '.editorconfig'
-      - '.gitattributes'
-      - '.gitignore'
-      - '.gitmodules'
-      - '.lintstagedrc.js'
-      - '.prettierignore'
-      - '.prettierrc'
-      - 'LICENSE'
-      - 'nukeeper.settings.json'
-      - 'omnisharp.json'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'Readme.md'
-      - '.github/dependabot.yml'
-      - '.github/labels.yml'
-      - '.github/release.yml'
-      - '.github/renovate.json'
+      - v*
   pull_request:
     branches:
-      - 'master'
-      - 'main'
-      - 'next'
-    paths-ignore:
-      - '.codecov.yml'
-      - '.editorconfig'
-      - '.gitattributes'
-      - '.gitignore'
-      - '.gitmodules'
-      - '.lintstagedrc.js'
-      - '.prettierignore'
-      - '.prettierrc'
-      - 'LICENSE'
-      - 'nukeeper.settings.json'
-      - 'omnisharp.json'
-      - 'package-lock.json'
-      - 'package.json'
-      - 'Readme.md'
-      - '.github/dependabot.yml'
-      - '.github/labels.yml'
-      - '.github/release.yml'
-      - '.github/renovate.json'
-permissions:
-  actions: read
-  checks: read
-  contents: read
-  deployments: read
-  id-token: none
-  issues: write
-  discussions: none
-  packages: none
-  pages: none
-  pull-requests: write
-  repository-projects: none
-  security-events: none
-  statuses: write
+      - master
+      - next
 
 jobs:
-  build:
-    env:
-      NUGET_PACKAGES: '${{ github.workspace }}/.nuget/packages'
-    runs-on: ubuntu-latest
+  Build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macOS-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v2
         with:
           clean: 'false'
           fetch-depth: '0'
-      - name: NuGet Cache
-        uses: actions/cache@v4
-        with:
-          path: '${{ github.workspace }}/.nuget/packages'
-          key: "${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props') }}-${{ hashFiles('**/Directory.Packages.support.props') }}"
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-      - name: 🔨 Use .NET Core 6.0 SDK
-        uses: actions/setup-dotnet@v4.0.1
-        with:
-          dotnet-version: '6.0.x'
-      - name: 🔨 Use .NET Core 8.0 SDK
-        uses: actions/setup-dotnet@v4.0.1
-        with:
-          dotnet-version: '8.0.x'
-      - name: 🚒 dotnet workload restore
-        continue-on-error: true
+      - name: Fetch all history for all tags and branches
         run: |
-          dotnet workload restore
-      - name: ⚒️ dotnet tool restore
+          git fetch --prune
+      - name: 🔨 Use .NET Core 2.1 SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '2.1.x'
+      - name: 🔨 Use .NET Core 3.1 SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x'
+      - name: 🔨 Use .NET Core 5.0 SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.x'
+
+      - name: 🎁 dotnet tool restore
         run: |
           dotnet tool restore
       - name: 🎁 Restore
-        id: restore
         run: |
           dotnet nuke Restore --skip
-      - name: ⚙️ Build
-        id: build
+      - name: ⚙ Build
         run: |
           dotnet nuke Build --skip
       - name: 🚦 Test
-        id: test
         run: |
-          dotnet nuke Test TriggerCodeCoverageReports GenerateCodeCoverageReportCobertura GenerateCodeCoverageBadges GenerateCodeCoverageSummary GenerateCodeCoverageReport --skip
+          dotnet nuke Test Trigger_Code_Coverage_Reports Generate_Code_Coverage_Report_Cobertura Generate_Code_Coverage_Badges Generate_Code_Coverage_Summary Generate_Code_Coverage_Report --skip
       - name: 📦 Pack
-        id: pack
         run: |
           dotnet nuke Pack --skip
-      - name: 🏺 Publish coverage data
-        if: always()
-        uses: actions/upload-artifact@v4.4.0
-        with:
-          name: 'coverage'
-          path: 'coverage/'
-      - name: 📫 Publish Coverage
-        if: (github.event_name != 'pull_request' && github.event_name != 'pull_request_target') || ((github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.user.login != 'renovate[bot]' && github.event.pull_request.user.login != 'dependabot[bot]')
-        uses: codecov/codecov-action@v4.5.0
+      - name: 🐿 Publish Coverage
+        uses: codecov/codecov-action@v1.0.15
         with:
           name: 'actions-${{ matrix.os }}'
-          token: '${{ secrets.CODECOV_TOKEN }}'
       - name: 🏺 Publish logs
         if: always()
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v2.2.1
         with:
           name: 'logs'
           path: 'artifacts/logs/'
+      - name: 🏺 Publish coverage data
+        if: always()
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: 'coverage'
+          path: 'coverage/'
       - name: 🏺 Publish test data
         if: always()
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v2.2.1
         with:
           name: 'test data'
           path: 'artifacts/test/'
       - name: 🏺 Publish NuGet Packages
         if: always()
-        uses: actions/upload-artifact@v4.4.0
+        uses: actions/upload-artifact@v2.2.1
         with:
           name: 'nuget'
           path: 'artifacts/nuget/'
-  Publish:
-    needs:
-      - Build
-    uses: RocketSurgeonsGuild/actions/.github/workflows/publish-nuget.yml@v0.3.10
-    secrets:
-      RSG_NUGET_API_KEY: '${{ secrets.RSG_NUGET_API_KEY }}'
-      RSG_AZURE_DEVOPS: '${{ secrets.RSG_AZURE_DEVOPS }}'

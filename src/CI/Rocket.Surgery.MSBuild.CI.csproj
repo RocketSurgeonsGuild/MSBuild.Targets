@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;netstandard1.3;net5.0</TargetFrameworks>
     <DevelopmentDependency>true</DevelopmentDependency>
     <PackageDescription>Adds ci environment based metadata to the assembly via the AssemblyMetadata attribute</PackageDescription>
     <PackageTags>$(PackageTags);build;sdk;msbuild;ci;continous integration</PackageTags>
@@ -10,6 +10,7 @@
     <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
     <None Include="buildTransitive/*.*" Pack="true" PackagePath="buildTransitive" />
     <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
+    <ProjectReference Include="../Metadata/Rocket.Surgery.MSBuild.Metadata.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="**\*.cs" />

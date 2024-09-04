@@ -1,93 +1,131 @@
+using System.Collections.Generic;
+using System.Linq;
 using Nuke.Common.CI.GitHubActions;
-using Nuke.Common.CI.GitHubActions.Configuration;
+using Rocket.Surgery.Nuke;
 using Rocket.Surgery.Nuke.ContinuousIntegration;
 using Rocket.Surgery.Nuke.DotNetCore;
 using Rocket.Surgery.Nuke.GithubActions;
 
-#pragma warning disable CA1050
-
-[GitHubActionsSteps(
-    "ci-ignore",
-    GitHubActionsImage.UbuntuLatest,
+[AzurePipelinesSteps(
     AutoGenerate = false,
-    On = new[] { RocketSurgeonGitHubActionsTrigger.Push },
-    OnPushTags = new[] { "v*" },
-    OnPushBranches = new[] { "master", "main", "next" },
-    OnPullRequestBranches = new[] { "master", "main", "next" },
-    Enhancements = new[] { nameof(CiIgnoreMiddleware) }
+    InvokeTargets = new[] { nameof(Default) },
+    NonEntryTargets = new[]
+    {
+        nameof(ICIEnvironment.CIEnvironment),
+        nameof(ITriggerCodeCoverageReports.Trigger_Code_Coverage_Reports),
+        nameof(ITriggerCodeCoverageReports.Generate_Code_Coverage_Report_Cobertura),
+        nameof(IGenerateCodeCoverageBadges.Generate_Code_Coverage_Badges),
+        nameof(IGenerateCodeCoverageReport.Generate_Code_Coverage_Report),
+        nameof(IGenerateCodeCoverageSummary.Generate_Code_Coverage_Summary),
+        nameof(Default)
+    },
+    ExcludedTargets = new[]
+        { nameof(ICanClean.Clean), nameof(ICanRestoreWithDotNetCore.Restore), nameof(ICanRestoreWithDotNetCore.DotnetToolRestore) },
+    Parameters = new[]
+    {
+        nameof(IHaveCodeCoverage.CoverageDirectory), nameof(IHaveOutputArtifacts.ArtifactsDirectory), nameof(Verbosity),
+        nameof(IHaveConfiguration.Configuration)
+    }
 )]
-[GitHubActionsSteps(
-    "ci",
-    GitHubActionsImage.UbuntuLatest,
+[GitHubActionsSteps("ci", GitHubActionsImage.MacOsLatest, GitHubActionsImage.WindowsLatest, GitHubActionsImage.UbuntuLatest,
     AutoGenerate = false,
-    On = new[] { RocketSurgeonGitHubActionsTrigger.Push },
+    On = new[] { GitHubActionsTrigger.Push },
     OnPushTags = new[] { "v*" },
-    OnPushBranches = new[] { "master", "main", "next" },
-    OnPullRequestBranches = new[] { "master", "main", "next" },
+    OnPushBranches = new[] { "master", "next" },
+    OnPullRequestBranches = new[] { "master", "next" },
     InvokedTargets = new[] { nameof(Default) },
     NonEntryTargets = new[]
     {
         nameof(ICIEnvironment.CIEnvironment),
-        nameof(ITriggerCodeCoverageReports.TriggerCodeCoverageReports),
-        nameof(ITriggerCodeCoverageReports.GenerateCodeCoverageReportCobertura),
-        nameof(IGenerateCodeCoverageBadges.GenerateCodeCoverageBadges),
-        nameof(IGenerateCodeCoverageReport.GenerateCodeCoverageReport),
-        nameof(IGenerateCodeCoverageSummary.GenerateCodeCoverageSummary),
+        nameof(ITriggerCodeCoverageReports.Trigger_Code_Coverage_Reports),
+        nameof(ITriggerCodeCoverageReports.Generate_Code_Coverage_Report_Cobertura),
+        nameof(IGenerateCodeCoverageBadges.Generate_Code_Coverage_Badges),
+        nameof(IGenerateCodeCoverageReport.Generate_Code_Coverage_Report),
+        nameof(IGenerateCodeCoverageSummary.Generate_Code_Coverage_Summary),
         nameof(Default)
     },
     ExcludedTargets = new[] { nameof(ICanClean.Clean), nameof(ICanRestoreWithDotNetCore.DotnetToolRestore) },
-    Enhancements = new[] { nameof(CiMiddleware) }
+    Enhancements = new[] { nameof(Middleware) }
 )]
-[GitHubActionsLint(
-    "lint",
-    GitHubActionsImage.UbuntuLatest,
-    AutoGenerate = false,
-    OnPullRequestTargetBranches = new[] { "master", "main", "next" },
-    Enhancements = new[] { nameof(LintStagedMiddleware) }
-)]
-[PrintBuildVersion]
-[PrintCIEnvironment]
-[UploadLogs]
-[TitleEvents]
-[ContinuousIntegrationConventions]
-public partial class Pipeline
+[PrintBuildVersion, PrintCIEnvironment, UploadLogs]
+public partial class Solution
 {
-    public static RocketSurgeonGitHubActionsConfiguration CiIgnoreMiddleware(RocketSurgeonGitHubActionsConfiguration configuration)
+    public static RocketSurgeonGitHubActionsConfiguration Middleware(RocketSurgeonGitHubActionsConfiguration configuration)
     {
-        ((RocketSurgeonsGithubActionsJob)configuration.Jobs[0]).Steps = new List<GitHubActionsStep>
+        var buildJob = configuration.Jobs.First(z => z.Name == "Build");
+        var checkoutStep = buildJob.Steps.OfType<CheckoutStep>().Single();
+        // For fetch all
+        checkoutStep.FetchDepth = 0;
+        buildJob.Steps.InsertRange(buildJob.Steps.IndexOf(checkoutStep) + 1, new BaseGitHubActionsStep[] {
+            new RunStep("Fetch all history for all tags and branches") {
+                Run = "git fetch --prune"
+            },
+            new SetupDotNetStep("Use .NET Core 2.1 SDK") {
+                DotNetVersion = "2.1.x"
+            },
+            new SetupDotNetStep("Use .NET Core 3.1 SDK") {
+                DotNetVersion = "3.1.x"
+            },
+            new SetupDotNetStep("Use .NET Core 5.0 SDK") {
+                DotNetVersion = "5.0.x"
+            },
+        });
+
+        buildJob.Steps.Add(new UsingStep("Publish Coverage")
         {
-            new RunStep("N/A")
+            Uses = "codecov/codecov-action@v1",
+            With = new Dictionary<string, string>
             {
-                Run = "echo \"No build required\""
+                ["name"] = "actions-${{ matrix.os }}",
             }
-        };
+        });
 
-        return configuration.IncludeRepositoryConfigurationFiles();
-    }
+        buildJob.Steps.Add(new UploadArtifactStep("Publish logs")
+        {
+            Name = "logs",
+            Path = "artifacts/logs/",
+            If = "always()"
+        });
 
-    public static RocketSurgeonGitHubActionsConfiguration CiMiddleware(RocketSurgeonGitHubActionsConfiguration configuration)
-    {
-        configuration
-           .ExcludeRepositoryConfigurationFiles()
-           .AddNugetPublish()
-           .Jobs.OfType<RocketSurgeonsGithubActionsJob>()
-           .First(z => z.Name.Equals("build", StringComparison.OrdinalIgnoreCase))
-           .UseDotNetSdks("6.0", "8.0")
-           .AddNuGetCache()
-           // .ConfigureForGitVersion()
-           .ConfigureStep<CheckoutStep>(step => step.FetchDepth = 0)
-           .PublishLogs<Pipeline>();
+        buildJob.Steps.Add(new UploadArtifactStep("Publish coverage data")
+        {
+            Name = "coverage",
+            Path = "coverage/",
+            If = "always()"
+        });
 
-        return configuration;
-    }
+        buildJob.Steps.Add(new UploadArtifactStep("Publish test data")
+        {
+            Name = "test data",
+            Path = "artifacts/test/",
+            If = "always()"
+        });
 
-    public static RocketSurgeonGitHubActionsConfiguration LintStagedMiddleware(RocketSurgeonGitHubActionsConfiguration configuration)
-    {
-        configuration
-           .Jobs.OfType<RocketSurgeonsGithubActionsJob>()
-           .First(z => z.Name.Equals("Build", StringComparison.OrdinalIgnoreCase))
-           .UseDotNetSdks("6.0", "8.0");
+        buildJob.Steps.Add(new UploadArtifactStep("Publish NuGet Packages")
+        {
+            Name = "nuget",
+            Path = "artifacts/nuget/",
+            If = "always()"
+        });
 
+
+        /*
+
+  - publish: "${{ parameters.Artifacts }}/logs/"
+    displayName: Publish Logs
+    artifact: "Logs${{ parameters.Postfix }}"
+    condition: always()
+
+  - publish: ${{ parameters.Coverage }}
+    displayName: Publish Coverage
+    artifact: "Coverage${{ parameters.Postfix }}"
+    condition: always()
+
+  - publish: "${{ parameters.Artifacts }}/nuget/"
+    displayName: Publish NuGet Artifacts
+    artifact: "NuGet${{ parameters.Postfix }}"
+    condition: always()
+        */
         return configuration;
     }
 }

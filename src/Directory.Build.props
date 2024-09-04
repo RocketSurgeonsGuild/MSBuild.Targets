@@ -3,11 +3,15 @@
     <Import Project=".\CI\build\Rocket.Surgery.MSBuild.CI.props" />
     <Import Project=".\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.props" />
     <Import Project=".\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.props" />
+    <Import Project=".\Metadata\build\Rocket.Surgery.MSBuild.Metadata.props" />
     <Import Project=".\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.props" />
     <PropertyGroup>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <IsPackable>true</IsPackable>
-        <RootNamespace>$(MSBuildProjectName.Replace('.Abstractions', ''))</RootNamespace>
         <NoWarn>NU5105;$(NoWarn)</NoWarn>
     </PropertyGroup>
+    <ItemGroup>
+        <AdditionalFiles Condition="Exists('PublicAPI.Shipped.txt')" Include="PublicAPI.Shipped.txt" />
+        <AdditionalFiles Condition="Exists('PublicAPI.Unshipped.txt')" Include="PublicAPI.Unshipped.txt" />
+    </ItemGroup>
 </Project>

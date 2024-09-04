@@ -1,0 +1,3 @@
+﻿<Project>
+    <Import Project="..\build\Rocket.Surgery.MSBuild.Metadata.props" />
+</Project>

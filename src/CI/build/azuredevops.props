@@ -1,5 +1,10 @@
 <Project>
     <PropertyGroup>
+        <CoreCompileDependsOn>
+            $(CoreCompileDependsOn);
+            AddAzureDevOpsAttributes;
+        </CoreCompileDependsOn>
+
         <ContinuousIntegrationBuild Condition="'$(ContinuousIntegrationBuild)' == ''">true</ContinuousIntegrationBuild>
     </PropertyGroup>
 </Project>

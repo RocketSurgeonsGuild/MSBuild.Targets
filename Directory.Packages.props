@@ -13,7 +13,7 @@
   <ItemGroup>
     <PackageVersion Include="GitVersion.Tool" Version="6.0.4" />
     <PackageVersion Include="Nuke.Common" Version="8.1.0" />
-    <PackageVersion Include="ReportGenerator" Version="5.3.11" />
+    <PackageVersion Include="ReportGenerator" Version="5.4.0" />
     <PackageVersion Include="Rocket.Surgery.Nuke" Version="1.8.36" />
   </ItemGroup>
   <ItemGroup>

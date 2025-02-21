@@ -17,7 +17,7 @@
     <PackageVersion Include="Rocket.Surgery.Nuke" Version="1.8.36" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Bogus" Version="35.6.1" />
+    <PackageVersion Include="Bogus" Version="35.6.2" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="FakeItEasy" Version="8.3.0" />
     <PackageVersion Include="FakeItEasy.Analyzer.CSharp" Version="6.1.1" />

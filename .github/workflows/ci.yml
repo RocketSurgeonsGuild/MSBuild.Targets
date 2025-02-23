@@ -84,8 +84,20 @@ permissions:
 
 jobs:
   build:
-    env:
-      NUGET_PACKAGES: '${{ github.workspace }}/.nuget/packages'
+    permissions:
+      actions: read
+      checks: write
+      contents: read
+      deployments: read
+      id-token: none
+      issues: write
+      discussions: none
+      packages: none
+      pages: none
+      pull-requests: write
+      repository-projects: none
+      security-events: none
+      statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -93,21 +105,14 @@ jobs:
         with:
           clean: 'false'
           fetch-depth: '0'
-      - name: NuGet Cache
-        uses: actions/cache@v4
-        with:
-          path: '${{ github.workspace }}/.nuget/packages'
-          key: "${{ runner.os }}-nuget-${{ hashFiles('**/Directory.Packages.props') }}-${{ hashFiles('**/Directory.Packages.support.props') }}"
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-      - name: 🔨 Use .NET Core 6.0 SDK
-        uses: actions/setup-dotnet@v4.3.0
-        with:
-          dotnet-version: '6.0.x'
       - name: 🔨 Use .NET Core 8.0 SDK
         uses: actions/setup-dotnet@v4.3.0
         with:
           dotnet-version: '8.0.x'
+      - name: 🔨 Use .NET Core 9.0 SDK
+        uses: actions/setup-dotnet@v4.3.0
+        with:
+          dotnet-version: '9.0.x'
       - name: 🚒 dotnet workload restore
         continue-on-error: true
         run: |
@@ -118,31 +123,23 @@ jobs:
       - name: 🎁 Restore
         id: restore
         run: |
-          dotnet nuke Restore --skip
+          dotnet nuke --target DotnetCoreRestore Restore
       - name: ⚙️ Build
         id: build
         run: |
-          dotnet nuke Build --skip
-      - name: 🚦 Test
+          dotnet .build/bin/Debug/.build.dll --target DotnetCoreBuild Build
+      - name: 💨 Test
         id: test
         run: |
-          dotnet nuke Test TriggerCodeCoverageReports GenerateCodeCoverageReportCobertura GenerateCodeCoverageBadges GenerateCodeCoverageSummary GenerateCodeCoverageReport --skip
+          dotnet .build/bin/Debug/.build.dll --target DotnetCoreTest Test CollectCodeCoverage GenerateCodeCoverageReportCobertura GenerateCodeCoverageBadges GenerateCodeCoverageSummary GenerateCodeCoverageReport
       - name: 📦 Pack
         id: pack
         run: |
-          dotnet nuke Pack --skip
-      - name: 🏺 Publish coverage data
-        if: always()
-        uses: actions/upload-artifact@v4.6.1
-        with:
-          name: 'coverage'
-          path: 'coverage/'
-      - name: 📫 Publish Coverage
-        if: (github.event_name != 'pull_request' && github.event_name != 'pull_request_target') || ((github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.user.login != 'renovate[bot]' && github.event.pull_request.user.login != 'dependabot[bot]')
-        uses: codecov/codecov-action@v5.3.1
-        with:
-          name: 'actions-${{ matrix.os }}'
-          token: '${{ secrets.CODECOV_TOKEN }}'
+          dotnet .build/bin/Debug/.build.dll --target DotnetCorePack Pack --skip Build
+      - name: Default
+        id: default
+        run: |
+          dotnet .build/bin/Debug/.build.dll --target Default --skip Restore Build Test Pack
       - name: 🏺 Publish logs
         if: always()
         uses: actions/upload-artifact@v4.6.1
@@ -155,16 +152,40 @@ jobs:
         with:
           name: 'test data'
           path: 'artifacts/test/'
+      - name: 🚀 Publish Test Results
+        if: always()
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        with:
+          files: 'artifacts/test/**/*.trx'
+      - name: 🏺 Publish coverage data
+        if: always()
+        uses: actions/upload-artifact@v4.6.1
+        with:
+          name: 'coverage'
+          path: 'coverage/'
+      - name: 🚀 Publish Coverage Comment
+        if: always() && github.event_name == 'pull_request'
+        continue-on-error: true
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: 'Coverage'
+          path: 'coverage/summary/SummaryGithub.md'
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - name: 🚀 Publish Codecov Coverage
+        if: always() && (github.event_name != 'pull_request' && github.event_name != 'pull_request_target') || ((github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.user.login != 'renovate[bot]' && github.event.pull_request.user.login != 'dependabot[bot]')
+        continue-on-error: true
+        uses: codecov/codecov-action@v5.3.1
+        with:
+          name: 'actions'
+          token: '${{ secrets.CODECOV_TOKEN }}'
       - name: 🏺 Publish NuGet Packages
         if: always()
         uses: actions/upload-artifact@v4.6.1
         with:
           name: 'nuget'
           path: 'artifacts/nuget/'
-  Publish:
-    needs:
-      - Build
-    uses: RocketSurgeonsGuild/actions/.github/workflows/publish-nuget.yml@v0.3.15
-    secrets:
-      RSG_NUGET_API_KEY: '${{ secrets.RSG_NUGET_API_KEY }}'
-      RSG_AZURE_DEVOPS: '${{ secrets.RSG_AZURE_DEVOPS }}'
+      - name: 🏺 Publish Documentation
+        uses: actions/upload-artifact@v4.6.1
+        with:
+          name: 'docs'
+          path: 'artifacts/docs/'

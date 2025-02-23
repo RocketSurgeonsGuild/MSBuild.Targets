@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="../../src/MyAssembly/build/Rocket.Surgery.MyAssembly.props" />
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <RootNamespace>Rocket.Surgery.MyAssembly.Tests</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Common" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Features" PrivateAssets="all" />
+        <ProjectReference Include="../../src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" />
+        <PackageReference Include="Verify.SourceGenerators" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Testing.SourceGenerators" />
+        <Analyzer Include="../../src/MyAssembly/bin/$(Configuration)/netstandard2.0/Rocket.Surgery.MyAssembly.dll" />
+    </ItemGroup>
+    <Import Project="../../src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" />
+</Project>

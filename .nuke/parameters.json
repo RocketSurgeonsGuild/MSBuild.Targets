@@ -1,4 +1,4 @@
 {
-  "$schema": "./build.schema.json",
-  "Solution": "MSBuild.Targets.sln"
+    "$schema": "./build.schema.json",
+    "Solution": "MSBuild.Targets.sln"
 }

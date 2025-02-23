@@ -14,7 +14,6 @@
             Tags
         -->
         <LangVersion>preview</LangVersion>
-        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
         <Features>strict</Features>
         <Nullable>enable</Nullable>
         <AnalysisMode>AllEnabledByDefault</AnalysisMode>
@@ -22,10 +21,13 @@
         <NukeTelemetryVersion>1</NukeTelemetryVersion>
         <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
         <ImplicitUsings>enable</ImplicitUsings>
+<!--        <IsTrimmable>true</IsTrimmable>-->
+        <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
         <AnalysisLevel>latest</AnalysisLevel>
         <!--        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
         <!--        <WarningsNotAsErrors></WarningsNotAsErrors>-->
         <WarningsAsErrors>RS0017</WarningsAsErrors>
+        <NoWarn>$(NoWarn);CA1510</NoWarn>
 
         <NuGetAudit>true</NuGetAudit>
         <NuGetAuditMode>all</NuGetAuditMode>
@@ -39,8 +41,7 @@
             PackagePath="/images/"
             Visible="false"
         />
-        <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="/"
-            Visible="false" />
+        <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="/" Visible="false" />
     </ItemGroup>
     <ItemGroup>
         <ProjectCapability Include="DynamicDependentFile" />
@@ -49,5 +50,6 @@
     <ItemGroup>
         <Using Include="JetBrains.Annotations" />
         <Using Include="System.Diagnostics.CodeAnalysis" />
+        <Using Include="System.Diagnostics.CodeAnalysis.NotNullAttribute" Alias="NotNullAttribute" />
     </ItemGroup>
 </Project>

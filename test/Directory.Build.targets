@@ -4,13 +4,12 @@
         <PackageReference Include="Rocket.Surgery.Extensions.Testing.FakeItEasy" />
         <PackageReference Include="Rocket.Surgery.Extensions.Testing.XUnit" />
         <PackageReference Include="Bogus" />
-        <PackageReference Include="coverlet.collector" />
+        <PackageReference Include="Microsoft.CodeCoverage" />
         <PackageReference Include="FakeItEasy" />
-        <PackageReference Include="FakeItEasy.Analyzer.CSharp" />
-        <PackageReference Include="FluentAssertions" />
-        <PackageReference Include="FluentAssertions.Analyzers" />
+        <PackageReference Include="Shouldly" />
+        <PackageReference Include="Verify.Xunit" />
+        <Using Include="Shouldly" />
         <PackageReference Include="xunit" />
-        <PackageReference Include="xunit.analyzers" />
         <PackageReference Include="xunit.runner.visualstudio" />
     </ItemGroup>
     <Import Project="..\src\CI\build\Rocket.Surgery.MSBuild.CI.targets" />

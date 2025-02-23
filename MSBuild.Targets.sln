@@ -1,19 +1,20 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29006.145
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8FFDF555-DB50-45F9-9A2D-6410F39151C3}"
 	ProjectSection(SolutionItems) = preProject
-		src/Directory.Build.props = src/Directory.Build.props
-		src/Directory.Build.targets = src/Directory.Build.targets
-		src/.editorconfig = src/.editorconfig
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+		src\.editorconfig = src\.editorconfig
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DF33E0FB-9790-4654-B60F-8AB22E0CC3D1}"
 	ProjectSection(SolutionItems) = preProject
-		test/Directory.Build.props = test/Directory.Build.props
-		test/Directory.Build.targets = test/Directory.Build.targets
-		test/.editorconfig = test/.editorconfig
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Build.targets = test\Directory.Build.targets
+		test\.editorconfig = test\.editorconfig
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = ".build", ".build\.build.csproj", "{55EFAE2F-A7CA-4917-A381-4A6EF5E79610}"
@@ -30,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.MSBuild.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{C3D5FCFC-8271-4A98-BF22-D56EFD1206E8}"
 	ProjectSection(SolutionItems) = preProject
-		.config/dotnet-tools.json = .config/dotnet-tools.json
+		.config\dotnet-tools.json = .config\dotnet-tools.json
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
 		Directory.Packages.support.props = Directory.Packages.support.props
@@ -57,35 +58,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{C3D5FC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{6805A374-5E01-4A83-B179-224D0765AE04}"
 	ProjectSection(SolutionItems) = preProject
-		.github/dependabot.yml = .github/dependabot.yml
-		.github/labels.yml = .github/labels.yml
-		.github/release.yml = .github/release.yml
-		.github/renovate.json = .github/renovate.json
+		.github\dependabot.yml = .github\dependabot.yml
+		.github\labels.yml = .github\labels.yml
+		.github\release.yml = .github\release.yml
+		.github\renovate.json = .github\renovate.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{54992192-69EB-4F29-8466-778DA6530296}"
 	ProjectSection(SolutionItems) = preProject
-		.github/workflows/ci-ignore.yml = .github/workflows/ci-ignore.yml
-		.github/workflows/ci.yml = .github/workflows/ci.yml
-		.github/workflows/close-milestone.yml = .github/workflows/close-milestone.yml
-		.github/workflows/dependabot-merge.yml = .github/workflows/dependabot-merge.yml
-		.github/workflows/draft-release.yml = .github/workflows/draft-release.yml
-		.github/workflows/sync-labels.yml = .github/workflows/sync-labels.yml
-		.github/workflows/update-milestone.yml = .github/workflows/update-milestone.yml
-		.github/workflows/lint.yml = .github/workflows/lint.yml
+		.github\workflows\ci-ignore.yml = .github\workflows\ci-ignore.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		.github\workflows\close-milestone.yml = .github\workflows\close-milestone.yml
+		.github\workflows\dependabot-merge.yml = .github\workflows\dependabot-merge.yml
+		.github\workflows\draft-release.yml = .github\workflows\draft-release.yml
+		.github\workflows\sync-labels.yml = .github\workflows\sync-labels.yml
+		.github\workflows\update-milestone.yml = .github\workflows\update-milestone.yml
+		.github\workflows\lint.yml = .github\workflows\lint.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".husky", ".husky", "{78E64421-1156-466E-A77B-35DFD431C2E4}"
 	ProjectSection(SolutionItems) = preProject
-		.husky/pre-commit = .husky/pre-commit
+		.husky\pre-commit = .husky\pre-commit
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".vscode", ".vscode", "{234984AF-8902-4FEC-AD1B-EC538A0FEB23}"
 	ProjectSection(SolutionItems) = preProject
-		.vscode/settings.json = .vscode/settings.json
+		.vscode\settings.json = .vscode\settings.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.MSBuild.GlobalAnalyzerConfig", "src\GlobalAnalyzerConfig\Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj", "{13C2EA12-2841-4051-9CBD-89A9E56B2445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.MyAssembly", "src\MyAssembly\Rocket.Surgery.MyAssembly.csproj", "{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.MyAssembly.roslyn4.6", "src\MyAssembly.roslyn4.6\Rocket.Surgery.MyAssembly.roslyn4.6.csproj", "{6BE57205-8535-45E7-B2EB-94F88987EB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAssembly.Tests", "test\MyAssembly.Tests\MyAssembly.Tests.csproj", "{CE004297-72A6-448C-9ECE-4CBE81E843D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,6 +182,42 @@ Global
 		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x64.Build.0 = Release|Any CPU
 		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x86.ActiveCfg = Release|Any CPU
 		{13C2EA12-2841-4051-9CBD-89A9E56B2445}.Release|x86.Build.0 = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|x64.Build.0 = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Debug|x86.Build.0 = Debug|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|x64.ActiveCfg = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|x64.Build.0 = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|x86.ActiveCfg = Release|Any CPU
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2}.Release|x86.Build.0 = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|x64.Build.0 = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Debug|x86.Build.0 = Debug|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|x64.ActiveCfg = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|x64.Build.0 = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|x86.ActiveCfg = Release|Any CPU
+		{6BE57205-8535-45E7-B2EB-94F88987EB49}.Release|x86.Build.0 = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|x64.Build.0 = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +234,9 @@ Global
 		{78E64421-1156-466E-A77B-35DFD431C2E4} = {C3D5FCFC-8271-4A98-BF22-D56EFD1206E8}
 		{234984AF-8902-4FEC-AD1B-EC538A0FEB23} = {C3D5FCFC-8271-4A98-BF22-D56EFD1206E8}
 		{13C2EA12-2841-4051-9CBD-89A9E56B2445} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
+		{6FEAB5FC-B4CF-421F-B4E5-6386E19235B2} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
+		{6BE57205-8535-45E7-B2EB-94F88987EB49} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
+		{CE004297-72A6-448C-9ECE-4CBE81E843D6} = {DF33E0FB-9790-4654-B60F-8AB22E0CC3D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {439897C2-CCBD-44FE-B2DC-A3E4670ADA59}

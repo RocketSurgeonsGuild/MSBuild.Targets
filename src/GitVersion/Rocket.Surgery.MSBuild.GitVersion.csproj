@@ -14,4 +14,7 @@
   <ItemGroup>
     <Compile Remove="**\*.cs" />
   </ItemGroup>
+    <ItemGroup>
+        <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute" />
+    </ItemGroup>
 </Project>

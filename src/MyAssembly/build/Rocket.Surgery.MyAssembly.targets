@@ -1,5 +1,4 @@
 ﻿<Project>
-
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)**/*$(DefaultLanguageSourceExtension)"
       Source="Shared" />
@@ -27,7 +26,4 @@
   <Import Project="$(MSBuildThisFileDirectory)MyAssembly.Constants.targets" />
   <Import Project="$(MSBuildThisFileDirectory)MyAssembly.Metadata.targets" />
   <Import Project="$(MSBuildThisFileDirectory)MyAssembly.Project.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)MyAssembly.Resources.targets" />
-
-
 </Project>

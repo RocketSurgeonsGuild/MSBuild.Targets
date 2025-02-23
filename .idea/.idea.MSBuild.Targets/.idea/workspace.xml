@@ -8,42 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ea40ab-f6c3-4ca2-946d-f04d8e8322f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.appveyor.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.build/.build.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/.build/.build.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.build/Build.CI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/.build/Build.CI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.build/Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/.build/Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.codecov.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.codecov.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.config/dotnet-tools.json" beforeDir="false" afterPath="$PROJECT_DIR$/.config/dotnet-tools.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/renovate.json" beforeDir="false" afterPath="$PROJECT_DIR$/.github/renovate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/close-milestone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/close-milestone.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/draft-release.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/draft-release.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/lint.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/lint.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/update-milestone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/update-milestone.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.lintstagedrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuke/build.schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuke/build.schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuke/parameters.json" beforeDir="false" afterPath="$PROJECT_DIR$/.nuke/parameters.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Directory.Build.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Build.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Directory.Build.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Build.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Directory.Packages.support.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.support.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MSBuild.Targets.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MSBuild.Targets.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSBuild.Targets.sln.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/MSBuild.Targets.sln.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NuGet.config" beforeDir="false" afterPath="$PROJECT_DIR$/NuGet.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/build.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/build.ps1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nukeeper.settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/omnisharp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Directory.Build.targets" beforeDir="false" afterPath="$PROJECT_DIR$/test/Directory.Build.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CI/Rocket.Surgery.MSBuild.CI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CI/Rocket.Surgery.MSBuild.CI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GitVersion/Rocket.Surgery.MSBuild.GitVersion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/Rocket.Surgery.MSBuild.GitVersion.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GlobalAnalyzerConfig/Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalAnalyzerConfig/Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JetBrains/Rocket.Surgery.MSBuild.JetBrains.Annotations.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JetBrains/Rocket.Surgery.MSBuild.JetBrains.Annotations.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/CSharp.sbntxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model copy 2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Model copy 2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model copy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Model copy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/PathSanitizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/PathSanitizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/StringsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/StringsGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SourceLink/Rocket.Surgery.MSBuild.SourceLink.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/SourceLink/Rocket.Surgery.MSBuild.SourceLink.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +32,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;david-driscoll&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "david-driscoll"
   }
-}</component>
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/myassembly" />
+                    <option name="lastUsedInstant" value="1740285632" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1740285557" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
@@ -66,35 +70,54 @@
       </list>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RocketSurgeonsGuild/MSBuild.Targets.git&quot;,
-    &quot;accountId&quot;: &quot;ae19e97d-a579-4e9a-bd0b-3919c64ceed7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RocketSurgeonsGuild/MSBuild.Targets.git",
+    "accountId": "ae19e97d-a579-4e9a-bd0b-3919c64ceed7"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CI/obj/Debug/netstandard1.3/Rocket.Surgery.MSBuild.CI.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/GitVersion/obj/Debug/netstandard1.3/Rocket.Surgery.MSBuild.GitVersion.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/src/MyAssembly/ConstantsGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f40ead9bef143f2b47be9554d3b75fc4af8ccb2ab76e3ae7ef57ed5de9fc0/GeneratorTestContextBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2tQ5fqP7JEpK0wOJPwLI6BaKkAg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/myassembly",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name=".build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -124,14 +147,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740271563746</updated>
-      <workItem from="1740271564792" duration="1993000" />
-      <workItem from="1740280902297" duration="2430000" />
+      <workItem from="1740271564792" duration="8844000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

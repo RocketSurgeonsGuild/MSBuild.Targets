@@ -19,7 +19,7 @@
     </ItemGroup>
     <ItemGroup>
         <None
-            Include="$(MSBuildThisFileDirectory)\..\Analyzers.roslyn4.6\bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll"
+            Include="$(MSBuildThisFileDirectory)\..\MyAssembly.roslyn4.6\bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll"
             Pack="true"
             PackagePath="analyzers/dotnet/roslyn4.6/cs"
             Visible="false"

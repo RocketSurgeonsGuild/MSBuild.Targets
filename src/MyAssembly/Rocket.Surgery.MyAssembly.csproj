@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <DefineConstants>$(DefineConstants);ROSLYN4_9</DefineConstants>
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="build/*.*" Pack="true" PackagePath="build" />
+        <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+        <None Include="buildTransitive/*.*" Pack="true" PackagePath="buildTransitive" />
+        <PackageReference Include="Polyfill" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
+        <ProjectReference
+            Include="../MyAssembly.roslyn4.6/Rocket.Surgery.MyAssembly.roslyn4.6.csproj"
+            PrivateAssets="all"
+            ReferenceOutputAssembly="false"
+        />
+    </ItemGroup>
+    <ItemGroup>
+        <None
+            Include="$(MSBuildThisFileDirectory)\..\Analyzers.roslyn4.6\bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll"
+            Pack="true"
+            PackagePath="analyzers/dotnet/roslyn4.6/cs"
+            Visible="false"
+        />
+        <None Include="bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll" Pack="true"
+            PackagePath="analyzers/dotnet/roslyn4.9/cs" Visible="false" />
+    </ItemGroup>
+    <ItemGroup>
+        <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute" />
+    </ItemGroup>
+</Project>

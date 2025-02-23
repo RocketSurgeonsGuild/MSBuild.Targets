@@ -1,21 +1,12 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["local>RocketSurgeonsGuild/.github:renovate-config"],
-    "js": {
-        "automerge": true,
-        "labels": [":truck: private-dependencies"]
-    },
-    "ignorePaths": ["**/node_modules/**", "**/bower_components/**", "**/*.csproj"],
+    "ignorePaths": ["**/node_modules/**", "**/*.csproj", "Directory.Packages.support.props"],
     "packageRules": [
         {
-            "description": "dotnet monorepo",
-            "enabled": false,
-            "matchSourceUrlPrefixes": [
-                "https://github.com/dotnet/aspnetcore",
-                "https://github.com/dotnet/efcore",
-                "https://github.com/dotnet/extensions",
-                "https://github.com/dotnet/runtime"
-            ]
+            "matchCategories": ["js"],
+            "automerge": true,
+            "labels": [":truck: private-dependencies"]
         }
     ]
 }

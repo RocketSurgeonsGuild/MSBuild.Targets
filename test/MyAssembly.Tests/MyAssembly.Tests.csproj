@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="../../src/MyAssembly/build/Rocket.Surgery.MyAssembly.props" />
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <RootNamespace>Rocket.Surgery.MyAssembly.Tests</RootNamespace>
@@ -12,7 +11,9 @@
         <ProjectReference Include="../../src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" />
         <PackageReference Include="Verify.SourceGenerators" />
         <PackageReference Include="Rocket.Surgery.Extensions.Testing.SourceGenerators" />
+        <AssemblyMetadata Include="Rocket.Surgery.Build" Value="CI" />
         <Analyzer Include="../../src/MyAssembly/bin/$(Configuration)/netstandard2.0/Rocket.Surgery.MyAssembly.dll" />
+        <EmbeddedResource Include="./MyAssembly.Tests.csproj" />
+        <EmbeddedResource Include="./snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource.verified.txt" />
     </ItemGroup>
-    <Import Project="../../src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" />
 </Project>

@@ -8,28 +8,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ea40ab-f6c3-4ca2-946d-f04d8e8322f9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MSBuild.Targets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MSBuild.Targets/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MSBuild.Targets.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MSBuild.Targets.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CI/Rocket.Surgery.MSBuild.CI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/CI/Rocket.Surgery.MSBuild.CI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GitVersion/Rocket.Surgery.MSBuild.GitVersion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/Rocket.Surgery.MSBuild.GitVersion.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GlobalAnalyzerConfig/Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/GlobalAnalyzerConfig/Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JetBrains/Rocket.Surgery.MSBuild.JetBrains.Annotations.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/JetBrains/Rocket.Surgery.MSBuild.JetBrains.Annotations.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/CSharp.sbntxt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssemblyInfo.roslyn4.6/Rocket.Surgery.AssemblyInfo.roslyn4.6.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model copy 2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Model copy 2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model copy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Model copy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Model.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/PathSanitizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/PathSanitizer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/StringsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/StringsGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SourceLink/Rocket.Surgery.MSBuild.SourceLink.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/SourceLink/Rocket.Surgery.MSBuild.SourceLink.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Constants.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Constants.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Metadata.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Metadata.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Project.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Project.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Directory.Build.props" beforeDir="false" afterPath="$PROJECT_DIR$/test/Directory.Build.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Directory.Build.targets" beforeDir="false" afterPath="$PROJECT_DIR$/test/Directory.Build.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/ConstantsGeneratorTests.Should_Require_Partial_Type_Declaration.verified.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/FirstTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/FirstTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/MyAssembly.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/MyAssembly.Tests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -47,12 +61,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/myassembly" />
-                    <option name="lastUsedInstant" value="1740285632" />
+                    <option name="branchName" value="feature/myassembly-bits" />
+                    <option name="lastUsedInstant" value="1740356661" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1740285557" />
+                    <option name="lastUsedInstant" value="1740333951" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/myassembly" />
+                    <option name="lastUsedInstant" value="1740333935" />
                   </RecentBranch>
                 </list>
               </option>
@@ -77,6 +95,9 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_IEnumerable_Except.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_MicroNanosecond.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_StringBuilder_GetChunks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
@@ -92,7 +113,20 @@
     <setting file="file://$PROJECT_DIR$/src/CI/obj/Debug/netstandard1.3/Rocket.Surgery.MSBuild.CI.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/GitVersion/obj/Debug/netstandard1.3/Rocket.Surgery.MSBuild.GitVersion.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/src/MyAssembly/ConstantsGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/src/MyAssembly/ResourcesGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/Information.Tests/obj/Debug/net9.0/Rocket.Surgery.MSBuild.Tests.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/Information.Tests/obj/Debug/net9.0/Verify.Attributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#kind.somefile.cs.g.received.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/610b90b38fa24ebcb27a2ab11d9bce03c7e00/e6/19a195f4/ManifestResourceInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c06673f4846f4984af370f3a7898b653d83800/13/00f64495/ResourceLocation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f40ead9bef143f2b47be9554d3b75fc4af8ccb2ab76e3ae7ef57ed5de9fc0/GeneratorTestContextBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/local/share/dotnet/sdk/9.0.200/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_9_all.globalconfig" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.AssemblyName.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RootNamespace.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RuntimeIdentifier.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RuntimeIdentifiers.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.TargetFrameworkIdentifier.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.TargetFrameworkMoniker.g.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -108,7 +142,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/myassembly",
+    "git-widget-placeholder": "feature/myassembly-bits",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +152,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project..build">
     <configuration name=".build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -147,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740271563746</updated>
-      <workItem from="1740271564792" duration="8844000" />
+      <workItem from="1740271564792" duration="25882000" />
     </task>
     <servers />
   </component>

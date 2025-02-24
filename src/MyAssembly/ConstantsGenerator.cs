@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System.Xml.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -33,27 +32,24 @@ public class ConstantsGenerator : IIncrementalGenerator
                                if (value != null && value.StartsWith("|") && value.EndsWith("|"))
                                    value = value[1..^1].Replace('|', ';');
 
-                               var name = Path.GetFileName(x.path);
+                               var name = x.path;
                                if (string.IsNullOrEmpty(root))
                                {
                                    root = "Constants";
                                }
                                else if (root == ".")
                                {
-                                   var parts = name.Split(['.'], 2);
-                                   if (parts.Length == 2)
-                                   {
-                                       // root should be the first part up to the first dot of name
-                                       // and name should be the rest
-                                       // note we only do this if there's an actual dot, otherwise, we
-                                       // just leave the root's default of Constants
-                                       root = parts[0];
-                                       name = parts[1];
-                                   }
+                                   var parts = name.Split(['.'], StringSplitOptions.RemoveEmptyEntries);
+                                   root = string.Join(".", parts.Take(parts.Length - 1));
+                                   name = parts.Last();
                                }
 
-                               return ( name, value: value ?? "", type: string.IsNullOrWhiteSpace(type) ? null : type, comment: string.IsNullOrWhiteSpace(comment) ? null : comment, root!,
-                                        rootComment! );
+                               return ( name,
+                                        value: value ?? "",
+                                        type: string.IsNullOrWhiteSpace(type) ? null : type,
+                                        comment: string.IsNullOrWhiteSpace(comment) ? null : comment, root!,
+                                        rootComment!
+                                   );
                            }
                     );
 
@@ -64,8 +60,7 @@ public class ConstantsGenerator : IIncrementalGenerator
                                c.GlobalOptions.TryGetValue("build_property.MyAssemblyNamespace", out var ns) && !string.IsNullOrEmpty(ns) ? ns : null,
                                c.GlobalOptions.TryGetValue("build_property.MyAssemblyVisibility", out var visibility) && !string.IsNullOrEmpty(visibility) ? visibility : null
                            )
-                    )
-                   .Combine(context.ParseOptionsProvider);
+                    );
 
         var inputs = files.Combine(right);
         context.RegisterSourceOutput(inputs, GenerateConstant);
@@ -73,12 +68,10 @@ public class ConstantsGenerator : IIncrementalGenerator
 
     void GenerateConstant(
         SourceProductionContext spc,
-        ((string name, string value, string? type, string? comment, string root, string rootComment), ((string? ns, string? visibility), ParseOptions parse)) args
+        ((string name, string value, string? type, string? comment, string root, string rootComment), (string? ns, string? visibility)) args
     )
     {
-        var ((name, value, type, comment, root, rootComment), ((ns, visibility), parse)) = args;
-        var cs = (CSharpParseOptions)parse;
-
+        var ((name, value, type, comment, root, rootComment), (ns, visibility)) = args;
         comment ??= value;
 
         var parts = root.Split(['.'], StringSplitOptions.RemoveEmptyEntries);
@@ -110,8 +103,16 @@ public class ConstantsGenerator : IIncrementalGenerator
         var cu = CompilationUnit();
         cu = ns is { Length: > 0 } ? cu.AddMembers(NamespaceDeclaration(ParseName(ns)).AddMembers(classDefinition)) : cu.AddMembers(classDefinition);
 
-        spc.AddSource($"{root}.{name}.g.cs", SourceText.From(cu
-                                                            .NormalizeWhitespace().GetText().ToString(), Encoding.UTF8));
+        spc.AddSource(
+            $"{root}.{name}.g.cs",
+            SourceText.From(
+                cu
+                   .NormalizeWhitespace()
+                   .GetText()
+                   .ToString(),
+                Encoding.UTF8
+            )
+        );
     }
 }
 

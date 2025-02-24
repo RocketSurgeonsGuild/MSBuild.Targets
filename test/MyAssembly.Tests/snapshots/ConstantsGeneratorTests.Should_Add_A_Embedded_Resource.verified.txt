@@ -1,9 +1,8 @@
 ﻿{
   FileOptions: {
     somefile.cs: {
+      build_metadata.EmbeddedResource.Area: kind,
       build_metadata.EmbeddedResource.Comment: comment,
-      build_metadata.EmbeddedResource.Kind: kind,
-      build_metadata.EmbeddedResource.MyAssemblyResource: true,
       build_metadata.EmbeddedResource.Value: somefile.cs
     }
   },

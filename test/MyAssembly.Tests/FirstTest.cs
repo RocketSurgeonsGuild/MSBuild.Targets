@@ -74,14 +74,15 @@ public class ConstantsGeneratorTests(ITestOutputHelper testOutputHelper) : Gener
                           .Build()
                           .GenerateAsync();
         await Verify(result);
+
     }
 }
 
 public static class GeneratorExtensions
 {
-    public static GeneratorTestContextBuilder AddConstant(this GeneratorTestContextBuilder builder, string name, string value, string type, string comment, string root, string rootComment)
+    public static GeneratorTestContextBuilder AddConstant(this GeneratorTestContextBuilder builder, string path, string value, string type, string comment, string root, string rootComment)
     {
-        var text = new MyText(name);
+        var text = new MyText(path);
         return builder
               .AddAdditionalTexts(text)
               .AddOption(text, "build_metadata.Constant.ItemType", "Constant")
@@ -91,14 +92,13 @@ public static class GeneratorExtensions
               .AddOption(text, "build_metadata.Constant.Root", root)
               .AddOption(text, "build_metadata.Constant.RootComment", rootComment);
     }
-    public static GeneratorTestContextBuilder AddEmbeddedResource(this GeneratorTestContextBuilder builder, string name, string resourceName, string kind, string comment)
+    public static GeneratorTestContextBuilder AddEmbeddedResource(this GeneratorTestContextBuilder builder, string path, string resourceName, string area, string comment)
     {
-        var text = new MyText(name);
+        var text = new MyText(path);
         return builder
               .AddAdditionalTexts(text)
-              .AddOption(text, "build_metadata.EmbeddedResource.MyAssemblyResource", "true")
               .AddOption(text, "build_metadata.EmbeddedResource.Value", resourceName)
-              .AddOption(text, "build_metadata.EmbeddedResource.Kind", kind)
+              .AddOption(text, "build_metadata.EmbeddedResource.Area", area)
               .AddOption(text, "build_metadata.EmbeddedResource.Comment", comment);
     }
 

@@ -12,6 +12,7 @@
         <PackageReference Include="xunit" />
         <PackageReference Include="xunit.runner.visualstudio" />
     </ItemGroup>
+    <Import Project="../src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" />
     <Import Project="..\src\CI\build\Rocket.Surgery.MSBuild.CI.targets" />
     <Import Project="..\src\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.targets" />
     <Import Project="..\src\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.targets" />

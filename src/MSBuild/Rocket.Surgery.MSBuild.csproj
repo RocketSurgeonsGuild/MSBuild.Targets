@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netstandard2.0;net8.0;net9.0</TargetFrameworks>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageDescription>Adds ci environment based metadata to the assembly via the AssemblyMetadata attribute</PackageDescription>
+    <PackageTags>$(PackageTags);build;sdk;msbuild;ci;continous integration</PackageTags>
+  </PropertyGroup>
+    <ItemGroup>
+        <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\CI\Rocket.Surgery.MSBuild.CI.csproj" />
+      <ProjectReference Include="..\GitVersion\Rocket.Surgery.MSBuild.GitVersion.csproj" />
+      <ProjectReference Include="..\GlobalAnalyzerConfig\Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj" />
+      <ProjectReference Include="..\SourceLink\Rocket.Surgery.MSBuild.SourceLink.csproj" />
+    </ItemGroup>
+</Project>

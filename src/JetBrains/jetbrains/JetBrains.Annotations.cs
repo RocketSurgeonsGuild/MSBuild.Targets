@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 #pragma warning disable
 
-using System;
+
 // ReSharper disable InheritdocConsiderUsage
 
 #pragma warning disable 1591

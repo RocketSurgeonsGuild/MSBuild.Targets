@@ -3,7 +3,7 @@
     <CompilerVisibleProperty Include="MyAssemblyNamespace"/>
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(GenerateMyAssembly)' != 'true'">
+  <PropertyGroup Condition="'$(GenerateAssemblyInfo)' != 'true'">
     <!-- The SDK will not set these attributes to 'true' unless GenerateMyAssembly=true, so we
     must override that
          in order for the attributes to be collected anyways. Since GenerateMyAssembly=false, the actual

@@ -1,7 +1,7 @@
 ﻿{
   FileOptions: {
-    something/somefile.cs: {
-      build_metadata.EmbeddedResource.Area: kind,
+    something/else/somefile.cs: {
+      build_metadata.EmbeddedResource.Area: something/else,
       build_metadata.EmbeddedResource.Comment: comment,
       build_metadata.EmbeddedResource.Value: something.somefile.cs
     }

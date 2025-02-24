@@ -16,10 +16,6 @@
             PrivateAssets="all"
             ReferenceOutputAssembly="false"
         />
-        <None Update="build\MyAssembly.Resources.targets">
-          <Pack>true</Pack>
-          <PackagePath>build</PackagePath>
-        </None>
     </ItemGroup>
     <ItemGroup>
         <None

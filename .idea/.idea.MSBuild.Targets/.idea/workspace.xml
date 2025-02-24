@@ -8,24 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ea40ab-f6c3-4ca2-946d-f04d8e8322f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MyAssembly/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/ConstantsGeneratorTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/ModuleInitializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MSBuild.Targets/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MSBuild.Targets/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSBuild.Targets.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MSBuild.Targets.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssemblyInfo.roslyn4.6/Rocket.Surgery.AssemblyInfo.roslyn4.6.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/GitVersion/build/Rocket.Surgery.MSBuild.GitVersion.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ConstantsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Constants.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Constants.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Metadata.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Metadata.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Project.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Project.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Resources.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/MyAssembly.Resources.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Directory.Build.props" beforeDir="false" afterPath="$PROJECT_DIR$/test/Directory.Build.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Directory.Build.targets" beforeDir="false" afterPath="$PROJECT_DIR$/test/Directory.Build.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/ConstantsGeneratorTests.Should_Require_Partial_Type_Declaration.verified.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/FirstTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/FirstTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/FirstTest.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/MyAssembly.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/MyAssembly.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#kind.somefile.cs.g.verified.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#somefile.cs.g.verified.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Nested_Embedded_Resource#kind.something.somefile.cs.g.verified.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Nested_Embedded_Resource#something.somefile.cs.g.verified.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,9 @@
       <option value="directory" />
       <option value="repository" />
     </option>
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -95,16 +96,17 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_IEnumerable_Except.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_MicroNanosecond.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.nuget/packages/polyfill/7.18.0/contentFiles/cs/netstandard2.0/Polyfill/Polyfill_StringBuilder_GetChunks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/.nuke/parameters.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/package-lock.json" root0="FORCE_HIGHLIGHTING" />
@@ -116,17 +118,20 @@
     <setting file="mock:///Users/david/Development/RocketSurgeonsGuild/MSBuild.Targets/src/MyAssembly/ResourcesGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/Information.Tests/obj/Debug/net9.0/Rocket.Surgery.MSBuild.Tests.GlobalUsings.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/test/Information.Tests/obj/Debug/net9.0/Verify.Attributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#kind.somefile.cs.g.received.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/ConstantsGeneratorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#somefile.cs.g.received.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Embedded_Resource#somefile.cs.g.verified.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Nested_Constant#Some.Nested.Root.Test.g.verified.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Nested_Embedded_Resource#something.somefile.cs.g.received.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/MyAssembly.Tests/snapshots/ConstantsGeneratorTests.Should_Add_A_Nested_Embedded_Resource#something.somefile.cs.g.verified.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/610b90b38fa24ebcb27a2ab11d9bce03c7e00/e6/19a195f4/ManifestResourceInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c06673f4846f4984af370f3a7898b653d83800/13/00f64495/ResourceLocation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5eb655555e81a96bc281e8a1aff4cae5636b44a77fa4d7f57cd3a76ed4917aa/XUnitTestContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9f40ead9bef143f2b47be9554d3b75fc4af8ccb2ab76e3ae7ef57ed5de9fc0/GeneratorTestContextBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/local/share/dotnet/sdk/9.0.200/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_9_all.globalconfig" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.AssemblyName.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RootNamespace.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RuntimeIdentifier.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.RuntimeIdentifiers.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.TargetFrameworkIdentifier.g.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Project.TargetFrameworkMoniker.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ResourcesGenerator/MyAssembly.Tests.csproj.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///var/folders/1_/t7jfzt7d76bgcrkcfk_g0fkc0000gn/T/SourceGeneratedDocuments/450B5F1A9604AA8C62384DAB/Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ResourcesGenerator/snapshots.ConstantsGeneratorTests.Should_Add_A_Embedded_Resource.verified.txt.g.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -139,6 +144,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.Rocket.Surgery.MyAssembly: Generators.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -152,7 +158,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project..build">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Rocket.Surgery.MyAssembly: Generators">
     <configuration name=".build" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -173,6 +179,30 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Rocket.Surgery.MyAssembly: Generators" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETStandard,Version=v2.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="Generators" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" default="false" projectName="Rocket.Surgery.MyAssembly" projectPath="$PROJECT_DIR$/src/MyAssembly/Rocket.Surgery.MyAssembly.csproj" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.Rocket.Surgery.MyAssembly: Generators" />
+      <item itemvalue=".NET Project..build" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Launch Settings Profile.Rocket.Surgery.MyAssembly: Generators" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -181,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740271563746</updated>
-      <workItem from="1740271564792" duration="25882000" />
+      <workItem from="1740271564792" duration="31508000" />
     </task>
     <servers />
   </component>
@@ -196,19 +226,61 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+        <breakpoint type="DotNet Exception Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+        <breakpoint type="DotNet Exception Breakpoints">
           <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+        <breakpoint type="DotNet Exception Breakpoints">
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorExtensions.cs</url>
+          <line>11</line>
+          <properties documentPath="$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorExtensions.cs" containingFunctionPresentation="Method 'AddConstant'">
+            <startOffsets>
+              <option value="432" />
+            </startOffsets>
+            <endOffsets>
+              <option value="460" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorExtensions.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/test/MyAssembly.Tests/GeneratorExtensions.cs" containingFunctionPresentation="Method 'AddEmbeddedResource'">
+            <startOffsets>
+              <option value="1162" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1190" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs</url>
+          <line>106</line>
+          <properties documentPath="$PROJECT_DIR$/src/MyAssembly/ResourcesGenerator.cs" containingFunctionPresentation="Method 'GenerateSource'">
+            <startOffsets>
+              <option value="6025" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6142" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="DotNet Exception Breakpoints" />
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>

@@ -32,7 +32,7 @@ public class ConstantsGenerator : IIncrementalGenerator
                                if (value != null && value.StartsWith("|") && value.EndsWith("|"))
                                    value = value[1..^1].Replace('|', ';');
 
-                               var name = x.path;
+                               var name = Path.GetFileName(x.path);
                                if (string.IsNullOrEmpty(root))
                                {
                                    root = "Constants";

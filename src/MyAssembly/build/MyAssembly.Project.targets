@@ -1,29 +1,32 @@
 <Project>
   <ItemGroup>
-    <CompilerVisibleProperty Include="MyAssemblyNamespace" />
+    <CompilerVisibleProperty Include="MyAssemblyNamespace"/>
   </ItemGroup>
 
   <PropertyGroup>
     <!-- Backwards compability for original property name -->
-    <PrepareProjectPropertiesDependsOn>$(InjectMyAssemblyProjectDependsOn)</PrepareProjectPropertiesDependsOn>
+      <PrepareProjectPropertiesDependsOn>$(InjectMyAssemblyProjectDependsOn)</PrepareProjectPropertiesDependsOn>
     <PrepareProjectPropertiesDependsOn
-      Condition="'$(SourceControlInformationFeatureSupported)' == 'true'">
+        Condition="'$(SourceControlInformationFeatureSupported)' == 'true'">
       InitializeSourceControlInformation;
       $(PrepareProjectPropertiesDependsOn)
     </PrepareProjectPropertiesDependsOn>
   </PropertyGroup>
 
-  <Target Name="PrepareProjectProperties" BeforeTargets="PrepareConstants"
-    DependsOnTargets="$(PrepareProjectPropertiesDependsOn)">
+  <Target
+      Name="PrepareProjectProperties"
+      BeforeTargets="PrepareConstants"
+      DependsOnTargets="$(PrepareProjectPropertiesDependsOn)"
+  >
     <ItemGroup>
-      <ProjectPropertyDistinct Include="@(ProjectProperty -> Distinct())" />
+      <ProjectPropertyDistinct Include="@(ProjectProperty -> Distinct())"/>
     </ItemGroup>
     <ItemGroup>
       <!-- Collect requested properties, and eval their value -->
-      <Constant Include="@(ProjectPropertyDistinct -> 'Project.%(Identity)')"
-        Value="$(%(ProjectPropertyDistinct.Identity))" Comment="%(ProjectPropertyDistinct.Comment)"
-        Root="." />
+        <Constant Include="@(ProjectPropertyDistinct -> 'Project.%(Identity)')"
+                  Value="$(%(ProjectPropertyDistinct.Identity))" Comment="%(ProjectPropertyDistinct.Comment)"
+                  Root="."
+        />
     </ItemGroup>
   </Target>
-
 </Project>

@@ -52,9 +52,11 @@
     </ItemGroup>
   </Target>
 
-  <Target Name="_InjectConstantAdditionalFiles"
-    BeforeTargets="GenerateMSBuildEditorConfigFileShouldRun"
-    DependsOnTargets="PrepareResourceNames;PrepareConstants">
+  <Target
+      Name="_InjectConstantAdditionalFiles"
+      BeforeTargets="GenerateMSBuildEditorConfigFileShouldRun"
+      DependsOnTargets="PrepareResourceNames;PrepareConstants"
+  >
     <ItemGroup>
       <!-- Automatically handle escaping of ; due to https://github.com/dotnet/roslyn/issues/51692 -->
       <Constant Update="@(Constant)"
@@ -62,7 +64,7 @@
         <Value>|$([MSBuild]::ValueOrdefault('%(Constant.Value)', '').Replace(';', '|'))|</Value>
       </Constant>
 
-      <AdditionalFiles Include="@(Constant)" />
+      <AdditionalFiles Include="@(Constant)" Visible="false" />
     </ItemGroup>
   </Target>
 

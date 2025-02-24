@@ -4,6 +4,7 @@
     <Import Project="..\src\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.props" />
     <Import Project="..\src\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.props" />
     <Import Project="..\src\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.props" />
+    <Import Project="../src/MyAssembly/build/Rocket.Surgery.MyAssembly.props" />
     <PropertyGroup>
         <IsPackable>false</IsPackable>
         <MergeCoverage>true</MergeCoverage>

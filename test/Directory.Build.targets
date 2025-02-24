@@ -2,20 +2,20 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="Rocket.Surgery.Extensions.Testing.FakeItEasy" />
-        <PackageReference Include="Rocket.Surgery.Extensions.Testing.XUnit" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Testing.XUnit3" />
         <PackageReference Include="Bogus" />
         <PackageReference Include="Microsoft.CodeCoverage" />
         <PackageReference Include="FakeItEasy" />
         <PackageReference Include="Shouldly" />
-        <PackageReference Include="Verify.Xunit" />
+        <PackageReference Include="Verify.XunitV3" />
         <Using Include="Shouldly" />
-        <PackageReference Include="xunit" />
+        <PackageReference Include="xunit.v3" />
         <PackageReference Include="xunit.runner.visualstudio" />
     </ItemGroup>
+    <Import Project="../src/MyAssembly/build/Rocket.Surgery.MyAssembly.targets" />
     <Import Project="..\src\CI\build\Rocket.Surgery.MSBuild.CI.targets" />
     <Import Project="..\src\GitVersion\build\Rocket.Surgery.MSBuild.GitVersion.targets" />
     <Import Project="..\src\JetBrains\build\Rocket.Surgery.MSBuild.JetBrains.Annotations.targets" />
     <Import Project="..\src\SourceLink\build\Rocket.Surgery.MSBuild.SourceLink.targets" />
-    <Import
-        Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
 </Project>

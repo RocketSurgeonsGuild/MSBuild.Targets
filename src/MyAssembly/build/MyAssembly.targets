@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <CompilerVisibleProperty Include="MyAssemblyNamespace" />
+    <CompilerVisibleProperty Include="MyAssemblyNamespace"/>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(GenerateMyAssembly)' != 'true'">
@@ -16,55 +16,58 @@
     -->
     <GenerateAssemblyCompanyAttribute Condition="'$(GenerateAssemblyCompanyAttribute)' == ''">true</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyConfigurationAttribute
-      Condition="'$(GenerateAssemblyConfigurationAttribute)' == ''">true</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCopyrightAttribute Condition="'$(GenerateAssemblyCopyrightAttribute)' == ''">
-      true</GenerateAssemblyCopyrightAttribute>
+        Condition="'$(GenerateAssemblyConfigurationAttribute)' == ''">true</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCopyrightAttribute Condition="'$(GenerateAssemblyCopyrightAttribute)' == ''">true</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyDescriptionAttribute
-      Condition="'$(GenerateAssemblyDescriptionAttribute)' == ''">true</GenerateAssemblyDescriptionAttribute>
+        Condition="'$(GenerateAssemblyDescriptionAttribute)' == ''">true</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyFileVersionAttribute
-      Condition="'$(GenerateAssemblyFileVersionAttribute)' == ''">true</GenerateAssemblyFileVersionAttribute>
+        Condition="'$(GenerateAssemblyFileVersionAttribute)' == ''">true</GenerateAssemblyFileVersionAttribute>
     <GenerateMyAssemblyrmationalVersionAttribute
-      Condition="'$(GenerateMyAssemblyrmationalVersionAttribute)' == ''">true</GenerateMyAssemblyrmationalVersionAttribute>
+        Condition="'$(GenerateMyAssemblyrmationalVersionAttribute)' == ''">true</GenerateMyAssemblyrmationalVersionAttribute>
     <GenerateAssemblyTrademarkAttribute Condition="'$(GenerateAssemblyTrademarkAttribute)' == ''">
       true</GenerateAssemblyTrademarkAttribute>
     <GenerateAssemblyProductAttribute Condition="'$(GenerateAssemblyProductAttribute)' == ''">true</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute Condition="'$(GenerateAssemblyTitleAttribute)' == ''">true</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyVersionAttribute Condition="'$(GenerateAssemblyVersionAttribute)' == ''">true</GenerateAssemblyVersionAttribute>
     <GenerateRepositoryUrlAttribute
-      Condition="'$(GenerateRepositoryUrlAttribute)' == '' and !('$(TargetFrameworkIdentifier)' == '.NETFramework' and $([MSBuild]::VersionLessThan($(TargetFrameworkVersion), 4.5)))">
+        Condition="'$(GenerateRepositoryUrlAttribute)' == '' and !('$(TargetFrameworkIdentifier)' == '.NETFramework' and $([MSBuild]::VersionLessThan($(TargetFrameworkVersion), 4.5)))">
       true</GenerateRepositoryUrlAttribute>
     <GenerateNeutralResourcesLanguageAttribute
-      Condition="'$(GenerateNeutralResourcesLanguageAttribute)' == ''">true</GenerateNeutralResourcesLanguageAttribute>
+        Condition="'$(GenerateNeutralResourcesLanguageAttribute)' == ''">true</GenerateNeutralResourcesLanguageAttribute>
     <GenerateAssemblyMetadataAttributes Condition="'$(GenerateAssemblyMetadataAttributes)' == ''">
       true</GenerateAssemblyMetadataAttributes>
     <IncludeSourceRevisionInInformationalVersion
-      Condition="'$(IncludeSourceRevisionInInformationalVersion)' == ''">true</IncludeSourceRevisionInInformationalVersion>
+        Condition="'$(IncludeSourceRevisionInInformationalVersion)' == ''">true</IncludeSourceRevisionInInformationalVersion>
     <GenerateInternalsVisibleToAttributes
-      Condition="'$(GenerateInternalsVisibleToAttributes)' == ''">true</GenerateInternalsVisibleToAttributes>
+        Condition="'$(GenerateInternalsVisibleToAttributes)' == ''">true</GenerateInternalsVisibleToAttributes>
     <GenerateRequiresPreviewFeaturesAttribute
-      Condition="'$(GenerateRequiresPreviewFeaturesAttribute)' == '' and '$(IsNetCoreAppTargetingLatestTFM)' == 'true'">
+        Condition="'$(GenerateRequiresPreviewFeaturesAttribute)' == '' and '$(IsNetCoreAppTargetingLatestTFM)' == 'true'">
       true</GenerateRequiresPreviewFeaturesAttribute>
     <GenerateTargetPlatformAttribute Condition="'$(GenerateTargetPlatformAttribute)' == ''">true</GenerateTargetPlatformAttribute>
     <GenerateSupportedOSPlatformAttribute
-      Condition="'$(GenerateSupportedOSPlatformAttribute)' == ''">true</GenerateSupportedOSPlatformAttribute>
+        Condition="'$(GenerateSupportedOSPlatformAttribute)' == ''">true</GenerateSupportedOSPlatformAttribute>
     <GenerateDisableRuntimeMarshallingAttribute
-      Condition="'$(GenerateDisableRuntimeMarshallingAttribute)' == ''">true</GenerateDisableRuntimeMarshallingAttribute>
+        Condition="'$(GenerateDisableRuntimeMarshallingAttribute)' == ''">true</GenerateDisableRuntimeMarshallingAttribute>
   </PropertyGroup>
 
-  <Target Name="PrepareMyAssemblyConstants"
-    BeforeTargets="PrepareConstants"
-    DependsOnTargets="GetAssemblyAttributes">
+  <Target
+      Name="PrepareMyAssemblyConstants"
+      BeforeTargets="PrepareConstants"
+      DependsOnTargets="GetAssemblyAttributes"
+  >
     <ItemGroup>
       <MyAssemblyAttribute Include="@(AssemblyAttribute)"
-        Exclude="System.Reflection.AssemblyMetadataAttribute;System.Reflection.AssemblyMetadata"
-        Condition="$([MSBuild]::ValueOrDefault('%(Identity)', '').StartsWith('System.Reflection.Assembly')) == 'true'">
+                           Exclude="System.Reflection.AssemblyMetadataAttribute;System.Reflection.AssemblyMetadata"
+                           Condition="$([MSBuild]::ValueOrDefault('%(Identity)', '').StartsWith('System.Reflection.Assembly')) == 'true'">
         <Name>$([MSBuild]::ValueOrDefault('%(Identity)', '').Substring(26).Replace('Attribute', ''))</Name>
       </MyAssemblyAttribute>
     </ItemGroup>
     <ItemGroup>
       <Constant Include="@(MyAssemblyAttribute -> 'Info.%(Name)')"
-        Value="%(MyAssemblyAttribute._Parameter1)" Root="."
-        RootComment="Provides access to assembly attributes defined in the project as constants." />
+                Value="%(MyAssemblyAttribute._Parameter1)"
+                Root="."
+                RootComment="Provides access to assembly attributes defined in the project as constants."
+      />
     </ItemGroup>
   </Target>
 

@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace Rocket.Surgery.MyAssembly;
 
-[Generator(LanguageNames.CSharp)]
+[Generator]
 public class ConstantsGenerator : IIncrementalGenerator
 {
     public void Initialize(IncrementalGeneratorInitializationContext context)
@@ -116,7 +116,7 @@ public class ConstantsGenerator : IIncrementalGenerator
     }
 }
 
-public static class Extensions
+internal static class Extensions
 {
     private static TMember AddSimple<TMember>(this TMember member, XmlElementSyntax xmlElement) where TMember : MemberDeclarationSyntax
     {

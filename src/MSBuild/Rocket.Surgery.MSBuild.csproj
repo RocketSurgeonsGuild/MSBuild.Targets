@@ -9,13 +9,6 @@
         <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute"/>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference
-          Include="../MyAssembly/Rocket.Surgery.MyAssembly.csproj"
-          IncludeAssets="analyzers"
-          ExcludeAssets="compile;runtime;native"
-          PrivateAssets="contentfiles;build;buildMultitargeting;buildTransitive"
-          OutputItemType="Analyzer"
-      />
       <ProjectReference Include="..\CI\Rocket.Surgery.MSBuild.CI.csproj"/>
       <ProjectReference Include="..\GitVersion\Rocket.Surgery.MSBuild.GitVersion.csproj"/>
       <ProjectReference Include="..\GlobalAnalyzerConfig\Rocket.Surgery.MSBuild.GlobalAnalyzerConfig.csproj"/>

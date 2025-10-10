@@ -42,7 +42,7 @@
         <PackageVersion Include="Rocket.Surgery.Extensions.Testing.SourceGenerators" Version="9.0.5" />
         <PackageVersion Include="xunit.v3" Version="3.1.0" />
         <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
-        <PackageVersion Include="Verify.XunitV3" Version="30.20.1" />
+        <PackageVersion Include="Verify.XunitV3" Version="31.0.1" />
         <PackageVersion Include="Verify.SourceGenerators" Version="2.5.0" />
     </ItemGroup>
     <Import

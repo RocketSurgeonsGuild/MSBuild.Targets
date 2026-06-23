@@ -25,7 +25,7 @@
         <PackageVersion Include="Microsoft.Testing.Extensions.TrxReport" Version="2.1.0" />
         <PackageVersion Include="TUnit" Version="1.56.25" />
 
-        <PackageVersion Include="Verify.TUnit" Version="31.13.2" />
+        <PackageVersion Include="Verify.TUnit" Version="31.20.0" />
         <PackageVersion Include="JetBrains.Annotations.Sources" Version="2026.2.0" />
 
         <PackageVersion Include="Polyfill" Version="10.10.0" />

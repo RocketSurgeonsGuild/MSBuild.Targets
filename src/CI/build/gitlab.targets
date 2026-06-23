@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
     <ItemGroup>
         <AssemblyMetadata Include="Commit_Sha" Value="$(GITLAB_COMMIT_SHA)" />
         <AssemblyMetadata Include="Commit_Before_Sha" Value="$(GITLAB_COMMIT_BEFORE_SHA)" />

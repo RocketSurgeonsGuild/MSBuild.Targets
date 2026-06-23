@@ -32,9 +32,9 @@ public class ResourcesGenerator : IIncrementalGenerator
             .Combine(context.AnalyzerConfigOptionsProvider
                 .SelectMany((p, _) =>
                 {
-                    return  !p.GlobalOptions.TryGetValue("build_property.EmbeddedResourceStringExtensions", out var extensions) ||
-                        extensions == null 
-                        ?   []  
+                    return !p.GlobalOptions.TryGetValue("build_property.EmbeddedResourceStringExtensions", out var extensions) ||
+                        extensions == null
+                        ? []
                         : (IEnumerable<string>)extensions.Split('|');
                 })
                 .WithComparer(StringComparer.OrdinalIgnoreCase)

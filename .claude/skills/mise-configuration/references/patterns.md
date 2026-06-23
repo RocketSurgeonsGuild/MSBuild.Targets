@@ -183,16 +183,17 @@ OS        = "{{ os() }}"        # linux, macos, windows
 CPUS      = "{{ num_cpus() }}"
 OS_FAMILY = "{{ os_family() }}" # unix, windows
 
-# File operations
+
 
 
 
 {% if is_dir("src") %}
-VERSION     = "{{ read_file(path='VERSION') | trim }}"
+# File operations
+
+
+
+{% endif %}SRC_EXISTS = "true"# Directory checkVERSION     = "{{ read_file(path='VERSION') | trim }}"
 CONFIG_HASH = "{{ hash_file(path='config.json', len=8) }}"
-
-
-{% endif %}SRC_EXISTS = "true"# Directory check
 ```
 
 ### Filters
@@ -233,8 +234,7 @@ FIRST_ITEM = "{{ list | first }}"
 
 {% else %}
 # CI-specific settings
-LOG_LEVEL = "error"
-PARALLEL  = "{{ num_cpus() }}"
+
 
 
 {% endif %}
@@ -244,6 +244,8 @@ PARALLEL  = "{{ num_cpus() }}"
 {% elif os() == "linux" %}
 
 {% endif %}LOG_LEVEL   = "debug"
+LOG_LEVEL = "error"
+PARALLEL  = "{{ num_cpus() }}"
 # Local development
 PARALLEL    = "2"
 BREW_PREFIX = "/opt/homebrew"
@@ -260,31 +262,35 @@ PROJECT_ROOT = "{{config_root}}"
 BUILD_DIR    = "{{config_root}}/build/{{ os() }}-{{ arch() }}"
 CACHE_DIR    = "{{xdg_cache_home}}/{{ cwd | basename }}"
 
-# Git-derived values
+
 
 
 
 {% if os() == "macos" %}
-GIT_BRANCH = "{{ exec(command='git branch --show-current') | trim }}"
-GIT_SHA    = "{{ exec(command='git rev-parse --short HEAD') | trim }}"
-VERSION    = "{{ read_file(path='VERSION') | trim | default(value='0.0.0') }}"
+# Git-derived values
+
 
 
 {% else %}
 
 {% endif %}
 
-# Platform-specific
+GIT_BRANCH = "{{ exec(command='git branch --show-current') | trim }}"
+GIT_SHA    = "{{ exec(command='git rev-parse --short HEAD') | trim }}"
+VERSION    = "{{ read_file(path='VERSION') | trim | default(value='0.0.0') }}"
+
 
 
 {% if get_env(name='CI', default='false') == 'true' %}
-DYLD_LIBRARY_PATH = "{{config_root}}/lib"
-LD_LIBRARY_PATH   = "{{config_root}}/lib"
+# Platform-specific
+
 
 
 {% else %}
 
 {% endif %}LOG_LEVEL     = "error"
+DYLD_LIBRARY_PATH = "{{config_root}}/lib"
+LD_LIBRARY_PATH   = "{{config_root}}/lib"
 # Environment-aware
 PARALLEL_JOBS = "{{ num_cpus() }}"
 LOG_LEVEL     = "debug"

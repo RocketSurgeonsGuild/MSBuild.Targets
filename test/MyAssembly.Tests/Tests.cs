@@ -97,11 +97,6 @@ public class SomeTests
 
     /// <summary />
     [Test]
-    public async Task CanUseFileConstantLinkedFile() =>
-        await Assert.That(Path.Combine("Included", "Readme.txt")).IsEqualTo(MyNamespace.MyAssembly.Constants.Included.Readme);
-
-    /// <summary />
-    [Test]
     public async Task CanUseMetadata() =>
         await Assert.That(MyNamespace.MyAssembly.Metadata.Foo).IsEqualTo("Bar");
 

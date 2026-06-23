@@ -1,18 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0;net8.0;net9.0</TargetFrameworks>
-    <DevelopmentDependency>true</DevelopmentDependency>
-    <PackageDescription>Ensures that JetBrains.Annotations is made available via source (and not publicly exported)</PackageDescription>
-    <PackageTags>$(PackageTags);build;sdk;msbuild;jetbrains;jetbrains annotations</PackageTags>
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="build/*.*" Pack="true" PackagePath="build" />
-    <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
-    <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="**\*.cs" />
-  </ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.1;netstandard2.0;net8.0;net10.0</TargetFrameworks>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <PackageDescription>
+            Ensures that JetBrains.Annotations is made available via source (and not
+      publicly exported)
+        </PackageDescription>
+        <PackageTags>$(PackageTags);build;sdk;msbuild;jetbrains;jetbrains annotations</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="build/*.*" Pack="true" PackagePath="build" />
+        <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
+        <None Include="Sdk/*.*" Pack="true" PackagePath="Sdk" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="**\*.cs" />
+    </ItemGroup>
     <ItemGroup>
         <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute" />
     </ItemGroup>

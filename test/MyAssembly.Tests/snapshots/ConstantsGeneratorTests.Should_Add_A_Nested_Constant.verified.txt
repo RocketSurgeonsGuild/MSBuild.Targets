@@ -1,4 +1,4 @@
-﻿{
+{
   FileOptions: {
     Test: {
       build_metadata.Constant.Comment: comment,
@@ -9,15 +9,114 @@
       build_metadata.Constant.Value: Value
     }
   },
-  FinalDiagnostics: [],
+  FinalDiagnostics: [
+    {
+      Id: CS1513,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (21,37)-(21,38),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1513),
+      MessageFormat: } expected,
+      Message: } expected,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1514,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (21,37)-(21,38),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1514),
+      MessageFormat: { expected,
+      Message: { expected,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1519,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (21,37)-(21,38),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519),
+      MessageFormat: Invalid token '{0}' in a member declaration,
+      Message: Invalid token '.' in a member declaration,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1519,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,16)-(23,17),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519),
+      MessageFormat: Invalid token '{0}' in a member declaration,
+      Message: Invalid token '{' in a member declaration,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1519,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,16)-(23,17),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519),
+      MessageFormat: Invalid token '{0}' in a member declaration,
+      Message: Invalid token '{' in a member declaration,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1022,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (31,2)-(31,3),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1022),
+      MessageFormat: Type or namespace definition, or end-of-file expected,
+      Message: Type or namespace definition, or end-of-file expected,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    }
+  ],
   GeneratorDiagnostics: {
     Rocket.Surgery.MyAssembly.ConstantsGenerator: [],
-    Rocket.Surgery.MyAssembly.ResourcesGenerator: []
+    Rocket.Surgery.MyAssembly.ResourcesGenerator: [],
+    Rocket.Surgery.MyAssembly.StringsGenerator: []
   },
   References: [
     Microsoft.Extensions.DependencyInjection.Abstractions.dll,
     mscorlib.dll,
     netstandard.dll,
+    System.Collections.Concurrent.dll,
     System.ComponentModel.dll,
     System.Core.dll,
     System.dll,

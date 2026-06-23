@@ -1,0 +1,3 @@
+# global_level must be higher than the NET Analyzer files
+is_global = true
+global_level = 0

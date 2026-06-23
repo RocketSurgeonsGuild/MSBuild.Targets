@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
     <ItemGroup>
         <AssemblyMetadata Include="GitVersion_Major" Value="$(GitVersion_Major)" />
         <AssemblyMetadata Include="GitVersion_Minor" Value="$(GitVersion_Minor)" />

@@ -47,9 +47,9 @@ public static class EmbeddedResource
         var manifestResourceName = Assembly.GetExecutingAssembly()
                                            .GetManifestResourceNames().FirstOrDefault(x => x.EndsWith(resourceName, StringComparison.Ordinal));
 
-        return  string.IsNullOrEmpty(manifestResourceName) 
+        return string.IsNullOrEmpty(manifestResourceName)
             ? throw new InvalidOperationException($"Did not find required resource ending in '{resourceName}' in assembly '{baseName}'.")
-            :  Assembly.GetExecutingAssembly().GetManifestResourceStream(manifestResourceName) ??
+            : Assembly.GetExecutingAssembly().GetManifestResourceStream(manifestResourceName) ??
             throw new InvalidOperationException($"Did not find required resource '{manifestResourceName}' in assembly '{baseName}'.");
     }
 }

@@ -29,7 +29,7 @@ public static class GeneratorExtensions
               .AddOption(text, "build_metadata.EmbeddedResource.Comment", comment);
     }
 
-    class MyText(string name) : AdditionalText
+    private class MyText(string name) : AdditionalText
     {
         public override SourceText? GetText(CancellationToken cancellationToken = new CancellationToken()) => SourceText.From("", Encoding.UTF8);
 

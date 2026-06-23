@@ -1,4 +1,4 @@
-﻿//HintName: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/root.Test.g.cs
+//HintName: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/root.Test.g.cs
 internal static partial class MyAssembly
 {
     ///<summary>rootComment</summary>

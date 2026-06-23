@@ -1,2 +1,28 @@
-﻿<Project>
+<Project>
+    <ItemGroup Condition="'$(RSGEditorConfigEnabled)' == 'true'">
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)CodeAnalysis.editorconfig" />
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)CodingStyle.editorconfig" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(RSGRiderEnabled)' == 'true'">
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)JetBrains.editorconfig" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(RSGRoslynatorEnabled)' == 'true'">
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)Roslynator.editorconfig" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(RSGBannedApisEnabled)' == 'true'">
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)BannedApiAnalyzers.editorconfig" />
+        <AdditionalFiles Include="$(MSBuildThisFileDirectory)BannedSymbols.txt" Visible="false" />
+        <AdditionalFiles
+            Include="$(MSBuildThisFileDirectory)BannedSymbols.NewtonsoftJson.txt"
+            Condition="'$(RSGBannedNewtonsoftJsonEnabled)' == 'true'"
+            Visible="false"
+        />
+    </ItemGroup>
+    <ItemGroup>
+        <EditorConfigFiles Include="$(MSBuildThisFileDirectory)Rocket.Surgery.Sdk.SingleFileApp.editorconfig" Condition="'$(RSGSingleFileApp)' == 'true'" />
+        <EditorConfigFiles
+            Include="$(MSBuildThisFileDirectory)$(RSGSdkName).editorconfig"
+            Condition="'$(_RSGSdkName)' != '' AND Exists('$(MSBuildThisFileDirectory)$(_RSGSdkName).editorconfig')"
+        />
+    </ItemGroup>
 </Project>

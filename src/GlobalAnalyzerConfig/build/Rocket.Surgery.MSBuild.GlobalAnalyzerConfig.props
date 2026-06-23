@@ -1,8 +1,14 @@
-﻿<Project>
-  <PropertyGroup>
-    <RSGGlobalAnalyzerConfigEnabled Condition="$(RSGEditorConfigEnabled) == ''">true</RSGGlobalAnalyzerConfigEnabled>
-    <RSGGlobalAnalyzerConfigRoslynEnabled Condition="$(RSGGlobalAnalyzerConfigRoslynEnabled) == ''">true</RSGGlobalAnalyzerConfigRoslynEnabled>
-    <RSGGlobalAnalyzerConfigRiderEnabled Condition="$(RSGGlobalAnalyzerConfigRiderEnabled) == ''">true</RSGGlobalAnalyzerConfigRiderEnabled>
-    <RSGGlobalAnalyzerConfigRoslynatorEnabled Condition="$(RSGGlobalAnalyzerConfigRoslynatorEnabled) == ''">true</RSGGlobalAnalyzerConfigRoslynatorEnabled>
-  </PropertyGroup>
+<Project>
+    <PropertyGroup>
+        <RSGEditorConfigEnabled Condition="$(RSGEditorConfigEnabled) == ''">true</RSGEditorConfigEnabled>
+        <RSGBannedApisEnabled Condition="$(RSGBannedApisEnabled) == ''">true</RSGBannedApisEnabled>
+        <RSGRiderEnabled Condition="$(RSGRiderEnabled) == ''">true</RSGRiderEnabled>
+        <RSGBannedNewtonsoftJsonEnabled Condition="$(RSGBannedNewtonsoftJsonEnabled) == ''">true</RSGBannedNewtonsoftJsonEnabled>
+        <RSGRoslynatorEnabled Condition="$(RSGRoslynatorEnabled) == ''">true</RSGRoslynatorEnabled>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <!-- Auto-detect file-based apps (FileBasedProgram is set by the .NET SDK for file-based apps) -->
+        <RSGSingleFileApp Condition="'$(RSGSingleFileApp)' == '' AND '$(FileBasedProgram)' == 'true'">true</RSGSingleFileApp>
+    </PropertyGroup>
 </Project>

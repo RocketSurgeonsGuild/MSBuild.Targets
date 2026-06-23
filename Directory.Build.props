@@ -21,7 +21,7 @@
         <NukeTelemetryVersion>1</NukeTelemetryVersion>
         <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
         <ImplicitUsings>enable</ImplicitUsings>
-<!--        <IsTrimmable>true</IsTrimmable>-->
+        <!--        <IsTrimmable>true</IsTrimmable>-->
         <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
         <AnalysisLevel>latest</AnalysisLevel>
         <!--        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
@@ -33,16 +33,6 @@
         <NuGetAuditMode>all</NuGetAuditMode>
         <NuGetAuditLevel>moderate</NuGetAuditLevel>
     </PropertyGroup>
-    <ItemGroup>
-        <None
-            Include="$(MSBuildThisFileDirectory)/.nuke/temp/packageicon.png"
-            Condition="Exists('$(MSBuildThisFileDirectory)/.nuke/temp/packageicon.png')"
-            Pack="true"
-            PackagePath="/images/"
-            Visible="false"
-        />
-        <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="/" Visible="false" />
-    </ItemGroup>
     <ItemGroup>
         <ProjectCapability Include="DynamicDependentFile" />
         <ProjectCapability Include="DynamicFileNesting" />

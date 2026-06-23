@@ -1,4 +1,4 @@
-﻿{
+{
   FileOptions: {
     something/else/somefile.cs: {
       build_metadata.EmbeddedResource.Area: something/else,
@@ -9,12 +9,14 @@
   FinalDiagnostics: [],
   GeneratorDiagnostics: {
     Rocket.Surgery.MyAssembly.ConstantsGenerator: [],
-    Rocket.Surgery.MyAssembly.ResourcesGenerator: []
+    Rocket.Surgery.MyAssembly.ResourcesGenerator: [],
+    Rocket.Surgery.MyAssembly.StringsGenerator: []
   },
   References: [
     Microsoft.Extensions.DependencyInjection.Abstractions.dll,
     mscorlib.dll,
     netstandard.dll,
+    System.Collections.Concurrent.dll,
     System.ComponentModel.dll,
     System.Core.dll,
     System.dll,

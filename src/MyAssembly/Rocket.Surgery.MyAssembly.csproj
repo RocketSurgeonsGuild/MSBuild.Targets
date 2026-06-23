@@ -2,20 +2,19 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <NoPackageAnalysis>true</NoPackageAnalysis>
-        <DefineConstants>$(DefineConstants);ROSLYN4_9</DefineConstants>
+        <DefineConstants>$(DefineConstants);ROSLYN4_9;SCRIBAN_NO_ASYNC</DefineConstants>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     </PropertyGroup>
     <ItemGroup>
+        <None Remove="*.sbntxt" />
+        <EmbeddedResource Include="*.sbntxt" CopyToOutputDirectory="PreserveNewest" />
         <None Include="build/*.*" Pack="true" PackagePath="build" />
         <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
         <None Include="buildTransitive/*.*" Pack="true" PackagePath="buildTransitive" />
         <PackageReference Include="Polyfill" PrivateAssets="All" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
-        <ProjectReference
-            Include="../MyAssembly.roslyn4.6/Rocket.Surgery.MyAssembly.roslyn4.6.csproj"
-            PrivateAssets="all"
-            ReferenceOutputAssembly="false"
-        />
+        <ProjectReference Include="../MyAssembly.roslyn4.6/Rocket.Surgery.MyAssembly.roslyn4.6.csproj" PrivateAssets="all" ReferenceOutputAssembly="false" />
+        <PackageReference Include="Scriban" Pack="false" IncludeAssets="build" />
     </ItemGroup>
     <ItemGroup>
         <None
@@ -24,8 +23,7 @@
             PackagePath="analyzers/dotnet/roslyn4.6/cs"
             Visible="false"
         />
-        <None Include="bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll" Pack="true"
-            PackagePath="analyzers/dotnet/roslyn4.9/cs" Visible="false" />
+        <None Include="bin\$(Configuration)\netstandard2.0\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/roslyn4.9/cs" Visible="false" />
     </ItemGroup>
     <ItemGroup>
         <Using Remove="System.Diagnostics.CodeAnalysis.NotNullAttribute" />

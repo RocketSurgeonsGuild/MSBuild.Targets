@@ -1,8 +1,8 @@
 namespace Rocket.Surgery.MyAssembly.Tests;
 
-public class ConstantsGeneratorTests(ITestContextAccessor testOutputHelper) : GeneratorTest(testOutputHelper)
+public class ConstantsGeneratorTests : GeneratorTest
 {
-    [Fact]
+    [Test]
     public async Task Should_Add_A_Constant()
     {
         var result = await Builder
@@ -19,7 +19,7 @@ public class ConstantsGeneratorTests(ITestContextAccessor testOutputHelper) : Ge
         await Verify(result);
     }
 
-    [Fact]
+    [Test]
     public async Task Should_Add_A_Nested_Constant()
     {
         var result = await Builder
@@ -36,7 +36,7 @@ public class ConstantsGeneratorTests(ITestContextAccessor testOutputHelper) : Ge
         await Verify(result);
     }
 
-    [Fact]
+    [Test]
     public async Task Should_Add_A_Embedded_Resource()
     {
         var result = await Builder
@@ -51,7 +51,7 @@ public class ConstantsGeneratorTests(ITestContextAccessor testOutputHelper) : Ge
         await Verify(result);
     }
 
-    [Fact]
+    [Test]
     public async Task Should_Add_A_Nested_Embedded_Resource()
     {
         var result = await Builder

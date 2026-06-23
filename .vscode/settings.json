@@ -1,8 +1,27 @@
 {
-  "coverage-gutters.customizable.status-bar-toggler-watchCoverageAndVisibleEditors-enabled": true,
-  "coverage-gutters.coverageFileNames": [
-    "coverage/coverage.info"
-  ],
-  "coverage-gutters.showGutterCoverage": true,
-  "coverage-gutters.showRulerCoverage": true
+    "coverage-gutters.customizable.status-bar-toggler-watchCoverageAndVisibleEditors-enabled": true,
+    "coverage-gutters.coverageFileNames": ["coverage/coverage.info"],
+    "coverage-gutters.showGutterCoverage": true,
+    "coverage-gutters.showRulerCoverage": true,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#210e96",
+        "activityBar.background": "#210e96",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#cc2d13",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "editorGroup.border": "#210e96",
+        "panel.border": "#210e96",
+        "sash.hoverBorder": "#210e96",
+        "sideBar.border": "#210e96",
+        "statusBar.background": "#210e96",
+        "statusBar.debuggingBackground": "#83960e",
+        "statusBar.debuggingForeground": "#15202b",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#2b12c5",
+        "statusBarItem.remoteBackground": "#210e96",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "tab.activeBorder": "#210e96"
+    },
+    "peacock.color": "#210e96"
 }

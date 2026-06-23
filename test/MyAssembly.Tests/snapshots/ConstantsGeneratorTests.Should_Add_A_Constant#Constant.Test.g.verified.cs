@@ -27,7 +27,7 @@ partial class MyAssembly
         /// </summary>
         public const string Test = 
 """
-Value
+"Value"
 """;
     }
 }

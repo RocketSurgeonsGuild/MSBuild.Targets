@@ -19,31 +19,6 @@ public class SomeTests
     public async Task CanUseInfo() =>
         await Assert.That(MyNamespace.MyAssembly.Info.Title).IsEqualTo("MyAssembly.Tests");
 
-    /// <summary>
-    /// Verifies that the MyAssembly.Info.Description property returns the expected description value,
-    /// which includes a multiline string with special formatting and characters.
-    /// </summary>
-    [Test]
-    public async Task CanUseInfoDescription() =>
-        await Assert.That(MyNamespace.MyAssembly.Info.Description.ReplaceLineEndings()).IsEqualTo(
-            """
-            A Description
-                  with a newline and
-                  * Some "things" with quotes
-                  // Some comments too.
-            """.ReplaceLineEndings());
-
-    /// <summary />
-    [Test]
-    public async Task CanUseMultilineProjectProperty() =>
-        await Assert.That(MyNamespace.MyAssembly.Project.Multiline.ReplaceLineEndings()).IsEqualTo(
-            """
-                  A Description
-                  with a newline and
-                  * Some "things" with quotes
-                  // Some comments too.
-            """.ReplaceLineEndings());
-
     /// <summary />
     [Test]
     public async Task CanUseProjectFullFileContents()

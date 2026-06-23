@@ -5,8 +5,8 @@
       build_metadata.Constant.ItemType: Constant,
       build_metadata.Constant.Root: Some.Nested.Root,
       build_metadata.Constant.RootComment: should be some,
-      build_metadata.Constant.Type: ,
-      build_metadata.Constant.Value: Value
+      build_metadata.Constant.Type: string,
+      build_metadata.Constant.Value: "Value"
     }
   },
   FinalDiagnostics: [
@@ -59,14 +59,14 @@
       ]
     },
     {
-      Id: CS1519,
+      Id: CS0548,
       Title: ,
       Severity: Error,
       WarningLevel: 0,
-      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,16)-(23,17),
-      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519),
-      MessageFormat: Invalid token '{0}' in a member declaration,
-      Message: Invalid token '{' in a member declaration,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,16)-(23,16),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0548),
+      MessageFormat: '{0}': property or indexer must have at least one accessor,
+      Message: 'MyAssembly.': property or indexer must have at least one accessor,
       Category: Compiler,
       CustomTags: [
         Compiler,
@@ -75,14 +75,46 @@
       ]
     },
     {
-      Id: CS1519,
+      Id: CS1001,
       Title: ,
       Severity: Error,
       WarningLevel: 0,
       Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,16)-(23,17),
-      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1519),
-      MessageFormat: Invalid token '{0}' in a member declaration,
-      Message: Invalid token '{' in a member declaration,
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1001),
+      MessageFormat: Identifier expected,
+      Message: Identifier expected,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS1513,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,17)-(23,17),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1513),
+      MessageFormat: } expected,
+      Message: } expected,
+      Category: Compiler,
+      CustomTags: [
+        Compiler,
+        Telemetry,
+        NotConfigurable
+      ]
+    },
+    {
+      Id: CS0246,
+      Title: ,
+      Severity: Error,
+      WarningLevel: 0,
+      Location: Rocket.Surgery.MyAssembly/Rocket.Surgery.MyAssembly.ConstantsGenerator/Some.Nested.Root.Test.g.cs: (23,4)-(23,10),
+      HelpLink: https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0246),
+      MessageFormat: The type or namespace name '{0}' could not be found (are you missing a using directive or an assembly reference?),
+      Message: The type or namespace name 'Nested' could not be found (are you missing a using directive or an assembly reference?),
       Category: Compiler,
       CustomTags: [
         Compiler,

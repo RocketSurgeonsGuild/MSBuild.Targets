@@ -5,8 +5,8 @@
       build_metadata.Constant.ItemType: Constant,
       build_metadata.Constant.Root: Constant,
       build_metadata.Constant.RootComment: rootComment,
-      build_metadata.Constant.Type: ,
-      build_metadata.Constant.Value: Value
+      build_metadata.Constant.Type: string,
+      build_metadata.Constant.Value: "Value"
     }
   },
   FinalDiagnostics: [],

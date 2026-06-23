@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
     <PropertyGroup>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
         <PackageVersion Condition="'$(GitVersion_SemVer)'!=''">$(GitVersion_SemVer)</PackageVersion>

@@ -4,7 +4,7 @@ using Rocket.Surgery.Extensions.Testing.SourceGenerators;
 
 namespace Rocket.Surgery.MyAssembly.Tests;
 
-public abstract class GeneratorTest() : LoggerTest<TUnitTestRecord>(new(TUnit.Core.TestContext.Current!))
+public abstract class GeneratorTest() : LoggerTest<TestRecord>(new())
 {
     public GeneratorTestContextBuilder Builder { get; } = GeneratorTestContextBuilder
                                                          .Create()

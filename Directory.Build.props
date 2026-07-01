@@ -7,6 +7,7 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <PackageIcon>images/packageicon.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
         <!--
             in package
             Title
@@ -32,6 +33,8 @@
         <NuGetAudit>true</NuGetAudit>
         <NuGetAuditMode>all</NuGetAuditMode>
         <NuGetAuditLevel>moderate</NuGetAuditLevel>
+        <SolutionDir>$(MSBuildThisFileDirectory)</SolutionDir>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     </PropertyGroup>
     <ItemGroup>
         <ProjectCapability Include="DynamicDependentFile" />

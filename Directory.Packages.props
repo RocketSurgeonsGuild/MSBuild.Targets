@@ -33,7 +33,7 @@
         <PackageVersion Include="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="10.0.6" />
         <PackageVersion Include="Rocket.Surgery.Extensions.Testing.TUnit" Version="10.0.6" />
         <PackageVersion Include="Rocket.Surgery.Extensions.Testing.SourceGenerators" Version="10.0.6" />
-        <PackageVersion Include="Scriban" Version="7.2.5" />
+        <PackageVersion Include="Scriban" Version="7.2.6" />
         <PackageVersion Include="Verify.SourceGenerators" Version="2.5.0" />
     </ItemGroup>
     <Import

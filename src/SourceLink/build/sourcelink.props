@@ -1,12 +1,14 @@
 <Project>
     <PropertyGroup>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <AllowedOutputExtensionsInPackageBuildOutputFolder>
             $(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb
         </AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
         <CopyDocumentationFilesFromPackages>true</CopyDocumentationFilesFromPackages>
+        <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
     </PropertyGroup>
 </Project>

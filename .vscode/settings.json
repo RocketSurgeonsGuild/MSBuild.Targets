@@ -3,6 +3,7 @@
     "coverage-gutters.coverageFileNames": ["coverage/coverage.info"],
     "coverage-gutters.showGutterCoverage": true,
     "coverage-gutters.showRulerCoverage": true,
+    "xml.format.maxLineWidth": 0,
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#210e96",
         "activityBar.background": "#210e96",

@@ -72,7 +72,7 @@
 
         <PropertyGroup>
             <RepositoryRoot>@(_MyAssemblyGitSourceRoot)</RepositoryRoot>
-            <SourceLinkUrl>@(_MyAssemblyGitSourceRoot -> '%(SourceLinkUrl)')</SourceLinkUrl>
+            <SourceLinkUrl>@(_MyAssemblyGitSourceRoot->'%(SourceLinkUrl)')</SourceLinkUrl>
         </PropertyGroup>
 
         <Warning
@@ -83,7 +83,7 @@
 
         <PropertyGroup Condition="'$(RepositoryBranch)' == '' and '$(RepositoryRoot)' != ''">
             <!-- If we didnd't populate from CI/ENV, we can still use the source control provider itself to get the branch name -->
-            <_MyAssemblyGitBranchName>@(_MyAssemblyGitSourceRoot -> '%(BranchName)')</_MyAssemblyGitBranchName>
+            <_MyAssemblyGitBranchName>@(_MyAssemblyGitSourceRoot->'%(BranchName)')</_MyAssemblyGitBranchName>
             <!-- The above only works on .NET SDK 9.0+, so account for 8.0 implicit nuget package -->
 
             <_MyAssemblyGitBranchName Condition="'$(_MyAssemblyGitBranchName)' == ''">
